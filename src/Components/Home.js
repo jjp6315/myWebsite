@@ -1,33 +1,95 @@
 /**
- * Header component
+ * Home component
  *
- * Top navigation bar for your site. Set to remain visible as the
- * user scrolls so that they can constantly reach any part of your page.
+ * The section at the top of the page to display image of your
+ * choice, name and title that describes your career focus.
  */
-import React from "react";
 
-const Header = () => {
+import React from "react";
+import arrowSvg from "../images/down-arrow.svg";
+import PropTypes from "prop-types";
+
+/**
+ * Home background image
+ *
+ * Below is a sample image. Upload the image of your choice into the "images"
+ * directory and import here for use. Then, set imageAltText to string that
+ * represents what you see in that image.
+ *
+ *
+ * Need an image? Check out https://unsplash.com to download a photo you
+ * freely use on your site.
+ */
+import image from "../images/seoulNight.jpg";
+import portfolio from "../images/profile.jpg";
+
+const imageAltText = "Korea night view at 남산타워";
+
+const Home = ({ name, title }) => {
   return (
-    <div
-      style={{
-        position: "fixed",
-        display: "flex",
-        justifyContent: "flex-start",
-        gap: "2rem",
-        background: "rgba(23, 23, 23, 0.85)",
-        padding: "1rem",
-        top: 0,
-        paddingLeft: "2rem",
-        width: "100%",
-        zIndex: 10,
-      }}
-    >
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#footer">Contact</a>
-    </div>
+    <section id="home" className="min-height">
+      <img className="background" src={image} alt="" />
+      <div
+        style={{
+          position: "absolute",
+          top: "5rem",
+          left: "2rem",
+          width: "50rem",
+        }}
+      >
+        <h1 style={{ fontSize: 100, color: "white" }}>{name}</h1>
+        <h2 style={{ color: "white" }}>{title}</h2>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "3rem",
+          left: "50%",
+        }}
+      >
+        <a href="#about">
+          <img
+            src={arrowSvg}
+            style={{ height: "3rem", width: "3rem" }}
+            alt={imageAltText}
+          />
+        </a>
+        {/* <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} /> */}
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "60%",
+          left: "70%",
+          borderRadius: "50%",
+          border: "1px solid ivory",
+          width: "300px",
+          height: "300px",
+        }}
+      >
+        <img
+          className="profile"
+          style={{
+            borderRadius: "50%",
+            objectFit: "cover",
+            width: "300px",
+            height: "300px",
+          }}
+          src={portfolio}
+        />
+      </div>
+    </section>
   );
 };
 
-export default Header;
+// Home.defaultProps = {
+//   name: "",
+//   title: "",
+// };
+
+Home.propTypes = {
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+export default Home;

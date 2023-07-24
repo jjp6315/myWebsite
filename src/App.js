@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
+// Date: 9/4/2021
+import React from "react";
 import Box from "./Components/Box";
 import Circle from "./Components/Circle";
 import styled from "styled-components";
@@ -8,16 +8,32 @@ import Airpods from "./Components/Airpods";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import About from "./Components/About";
+import SpotifyPlaylist from "./Components/Spotify";
+import Portfolio from "./Components/Portfolio";
+import Footer from "./Components/Footer";
+
+import "./index.css";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+
+const siteProps = {
+  name: "Ji Woong John Park",
+  title: "Computer Science Student",
+  email: "johnpark0528@gmail.com",
+  gitHub: "https://github.com/jjp6315",
+  instagram: "https://www.instagram.com/jw_p_17/",
+  linkedIn: "https://www.linkedin.com/in/ji-woong-park-7076b51b6/",
+  medium: "",
+};
 
 function App() {
   return (
     <div id="Main">
       <Header />
-      <Home name={"Ji Woong John Park"} title={"Computer Science Student"} />
+      <Home name={siteProps.name} title={siteProps.title} />
       <About />
+      <SpotifyPlaylist />
       <Wrapper>
         <Canvas className="canvas">
           <OrbitControls enableZoom={false} />
@@ -44,6 +60,13 @@ function App() {
           <Airpods />
         </Canvas>
       </Wrapper>
+      <Portfolio />
+
+      <Footer
+        {...siteProps}
+        primaryColor={"#4E567E"}
+        secondaryColor={"#D2F1E4"}
+      />
     </div>
   );
 }
