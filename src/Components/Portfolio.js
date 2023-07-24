@@ -65,14 +65,11 @@ const Portfolio = () => {
       >
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
           <img
-            className="hidden"
             src={image}
             style={{
               height: "90%",
               width: "100%",
               objectFit: "cover",
-              /* add a slide in animation when scrolling*/
-              animation: "slideIn 1s",
             }}
           />
         </div>
