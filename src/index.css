@@ -169,9 +169,7 @@ img.socialIcon {
 }
 
 .canvas {
-  background-color: red;
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1; */
+  background-color: black;
+  /* increase height of canvas */
+  height: 100vh;
 }

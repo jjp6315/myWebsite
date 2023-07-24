@@ -25,7 +25,7 @@ import portfolio from "../images/profile.jpg";
 
 const imageAltText = "Korea night view at 남산타워";
 
-const Home = ({ name, title }) => {
+const Home = ({ name }) => {
   return (
     <section id="home" className="min-height">
       <img className="background" src={image} alt="" />
@@ -38,7 +38,7 @@ const Home = ({ name, title }) => {
         }}
       >
         <h1 style={{ fontSize: 100, color: "white" }}>{name}</h1>
-        <h2 style={{ color: "white" }}>{title}</h2>
+        <h2 style={{ color: "white" }}>This is a test</h2>
       </div>
       <div
         style={{
@@ -59,7 +59,7 @@ const Home = ({ name, title }) => {
       <div
         style={{
           position: "absolute",
-          bottom: "60%",
+          bottom: "10%",
           left: "70%",
           borderRadius: "50%",
           border: "1px solid ivory",

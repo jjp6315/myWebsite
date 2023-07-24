@@ -31,11 +31,11 @@ function App() {
   return (
     <div id="Main">
       <Header />
-      <Home name={siteProps.name} title={siteProps.title} />
+      <Home name={siteProps.name} />
       <About />
       <SpotifyPlaylist />
       <Wrapper>
-        <Canvas className="canvas">
+        {/* <Canvas className="canvas">
           <OrbitControls enableZoom={false} />
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -46,16 +46,16 @@ function App() {
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <Circle />
-        </Canvas>
-        <Canvas className="canvas">
+        </Canvas> */}
+        {/* <Canvas className="canvas">
           <OrbitControls enableZoom={false} />
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <Iphone />
-        </Canvas>
+        </Canvas> */}
         <Canvas className="canvas">
-          <OrbitControls enableZoom={true} />
-          <ambientLight intensity={0.5} />
+          <OrbitControls enableZoom={false} />
+          <ambientLight intensity={0.4} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <Airpods />
         </Canvas>
@@ -76,4 +76,5 @@ export default App;
 const Wrapper = styled.div`
   position: relative;
   background-color: #282c34;
+  height: 70vh;
 `;

@@ -9,13 +9,25 @@ Title: AirPods Pro
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF("/airpods.gltf");
+
+  const groupRef = useRef();
+
+  useFrame(() => {
+    // You can adjust the rotation speed and direction here
+    groupRef.current.rotation.y -= 0.01; // Rotate around the Y-axis
+    // groupRef.current.rotation.x += 0.01; // Rotate around the X-axis
+    // groupRef.current.rotation.z += 0.01; // Rotate around the Z-axis
+  });
+
   return (
-    <group {...props} dispose={null}>
-      <group position={[0, 0, 0]}>
-        <group position={[0, 0, 0.673]} scale={2.39}>
+    <group ref={groupRef} {...props} dispose={null}>
+      <group position={[0, 0, 0]} rotation={[Math.PI / 1.8, 0, 0]}>
+        {/* Right Ear */}
+        <group position={[0.2, 0.4, 0]} rotation={[-0.3, 0, 0]} scale={0.39}>
           <mesh
             geometry={nodes.Object_5.geometry}
             material={materials.cEVcwrpGKjNUrED}
@@ -41,7 +53,8 @@ export default function Model(props) {
             material={materials.BQKMNbgpcCWqzPH}
           />
         </group>
-        <group position={[0, 0, 3.009]} scale={2.39}>
+        {/* Left Ear */}
+        <group position={[-0.2, 0.4, 0]} rotation={[-0.3, 0, 0]} scale={0.39}>
           <mesh
             geometry={nodes.Object_12.geometry}
             material={materials.czaVLhHNccVShhr}
@@ -67,7 +80,8 @@ export default function Model(props) {
             material={materials.DrEQLAPBkLNlpSM}
           />
         </group>
-        <group position={[0, 0, -0.755]} scale={2.39}>
+        {/* Top Case */}
+        <group scale={0.39}>
           <mesh
             geometry={nodes.Object_19.geometry}
             material={materials.FJixwyYXpYmTghW}
@@ -85,7 +99,8 @@ export default function Model(props) {
             material={materials.cEVcwrpGKjNUrED}
           />
         </group>
-        <group position={[0, 0, -0.755]} scale={2.39}>
+        {/* Bottom Case */}
+        <group scale={0.39}>
           <mesh
             geometry={nodes.Object_24.geometry}
             material={materials.EGgayDtrTMexFep}
