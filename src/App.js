@@ -11,6 +11,7 @@ import About from "./Components/About";
 import SpotifyPlaylist from "./Components/Spotify";
 import Portfolio from "./Components/Portfolio";
 import Footer from "./Components/Footer";
+import Headphone from "./Components/Headphone";
 
 import "./index.css";
 
@@ -33,66 +34,20 @@ function App() {
       <Header />
       <Home name={siteProps.name} />
       <About />
-      <section
+      <div
         style={{
-          backgroundColor: "black",
           display: "flex",
-          flexDirection: "row",
-          flex: 1,
-          justifyContent: "space-around",
-          paddingBottom: "30vh",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          backgroundColor: "black",
         }}
       >
-        <div
-          style={{
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
-          <h2
-            style={{
-              color: "white",
-              paddingTop: "10vh",
-              paddingBottom: "15vh",
-              fontFamily: "San Francisco",
-              fontStyle: "normal",
-              fontSize: "4vh",
-            }}
-          >
-            Listen to My Favorite Music
-          </h2>
+        <div style={{ display: "flex" }}>
           <SpotifyPlaylist />
+          <Headphone />
         </div>
-
-        <div
-          style={{
-            alignItems: "center",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <h2
-            style={{
-              color: "white",
-              paddingTop: "14vh",
-              paddingBottom: "15vh",
-              fontFamily: "San Francisco",
-              fontStyle: "normal",
-              fontSize: "4vh",
-            }}
-          >
-            What I listen with{" "}
-          </h2>
-          <div className="wrapper" style={{ backgroundColor: "black" }}>
-            <Canvas className="canvas">
-              <OrbitControls enableZoom={false} />
-              <ambientLight intensity={0.4} color="silver" />
-              <directionalLight position={[10, 10, 5]} intensity={0.3} />
-              <Airpods />
-            </Canvas>
-          </div>
-        </div>
-      </section>
+      </div>
       <Portfolio />
 
       <Footer
@@ -106,4 +61,13 @@ function App() {
 
 export default App;
 
-//
+{
+  /* <div className="wrapper" style={{ backgroundColor: "black" }}>
+  <Canvas className="canvas">
+    <OrbitControls enableZoom={false} />
+    <ambientLight intensity={0.4} color="silver" />
+    <directionalLight position={[10, 10, 5]} intensity={0.3} />
+    <Airpods />
+  </Canvas>
+</div> */
+}
