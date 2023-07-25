@@ -173,3 +173,8 @@ img.socialIcon {
   /* increase height of canvas */
   height: 100vh;
 }
+
+.rowC {
+  display: flex;
+  flex-direction: row;
+}

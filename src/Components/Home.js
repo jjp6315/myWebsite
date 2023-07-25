@@ -8,6 +8,7 @@
 import React from "react";
 import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
+import { Cursor, useTypewriter, Typewriter } from "react-simple-typewriter";
 
 /**
  * Home background image
@@ -26,6 +27,22 @@ import portfolio from "../images/profile.jpg";
 const imageAltText = "Korea night view at 남산타워";
 
 const Home = ({ name }) => {
+  const [text] = useTypewriter({
+    words: [
+      "coding",
+      "reading",
+      "playing soccer",
+      "photography",
+      "designing",
+      "traveling",
+      "thinking",
+      "creating",
+    ],
+    loop: true,
+
+    deleteSpeed: 50,
+    typeSpeed: 70,
+  });
   return (
     <section id="home" className="min-height">
       <img className="background" src={image} alt="" />
@@ -38,7 +55,32 @@ const Home = ({ name }) => {
         }}
       >
         <h1 style={{ fontSize: 100, color: "white" }}>{name}</h1>
-        <h2 style={{ color: "white" }}>This is a test</h2>
+        <h2 style={{ fontSize: 50, color: "white" }}>
+          I enjoy {""}
+          {/* <Typewriter
+            words={[
+              "coding",
+              "reading",
+              "playing soccer",
+              "photography",
+              "designing",
+              "traveling",
+              "thinking",
+              "creating",
+            ]}
+            loop={true}
+            cursor
+            cursorStyle="|"
+            typeSpeed={90}
+            deleteSpeed={50}
+            delaySpeed={700}
+            cursorColor="white"
+
+            // cursorBlinking={false}
+          /> */}
+          {text}
+          <Cursor cursorStyle="_" cursorColor="white" />
+        </h2>
       </div>
       <div
         style={{
@@ -89,7 +131,6 @@ const Home = ({ name }) => {
 
 Home.propTypes = {
   name: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
 };
 
 export default Home;
