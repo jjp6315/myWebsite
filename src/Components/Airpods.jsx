@@ -27,7 +27,7 @@ export default function Model(props) {
     <group ref={groupRef} {...props} dispose={null}>
       <group position={[0, 0, 0]} rotation={[Math.PI / 1.8, 0, 0]}>
         {/* Right Ear */}
-        <group position={[0.2, 0.4, 0]} rotation={[-0.3, 0, 0]} scale={0.39}>
+        <group position={[0.2, 0.4, 0]} rotation={[-0.3, 0, 0]} scale={0.5}>
           <mesh
             geometry={nodes.Object_5.geometry}
             material={materials.cEVcwrpGKjNUrED}
@@ -54,7 +54,7 @@ export default function Model(props) {
           />
         </group>
         {/* Left Ear */}
-        <group position={[-0.2, 0.4, 0]} rotation={[-0.3, 0, 0]} scale={0.39}>
+        <group position={[-0.2, 0.4, 0]} rotation={[-0.3, 0, 0]} scale={0.5}>
           <mesh
             geometry={nodes.Object_12.geometry}
             material={materials.czaVLhHNccVShhr}
@@ -81,7 +81,7 @@ export default function Model(props) {
           />
         </group>
         {/* Top Case */}
-        <group scale={0.39}>
+        <group scale={0.5}>
           <mesh
             geometry={nodes.Object_19.geometry}
             material={materials.FJixwyYXpYmTghW}
@@ -100,7 +100,7 @@ export default function Model(props) {
           />
         </group>
         {/* Bottom Case */}
-        <group scale={0.39}>
+        <group scale={0.5}>
           <mesh
             geometry={nodes.Object_24.geometry}
             material={materials.EGgayDtrTMexFep}

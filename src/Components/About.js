@@ -54,7 +54,7 @@ const About = () => {
       className="padding"
       id="about"
       style={{
-        backgroundColor: "rgba(0, 0, 0, 0.95)",
+        backgroundColor: "black",
         height: "90vh",
       }}
     >
@@ -102,16 +102,3 @@ const About = () => {
 };
 
 export default About;
-
-// <section className="hidden">
-//   <h2>My Resume</h2>
-//   <p> lroesn sldfj asalksdfjaslk;fj salf;ksjd</p>
-// </section>
-// <section className="hidden">
-//   <h2>My life</h2>
-//   <p> lroesn sldfj asalksdfjaslk;fj salf;ksjd</p>
-// </section>
-// <section className="hidden">
-//   <h2>My workout</h2>
-//   <p> lroesn sldfj asalksdfjaslk;fj salf;ksjd</p>
-// </section>

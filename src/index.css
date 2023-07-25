@@ -129,7 +129,7 @@ a:hover {
   margin: 20px auto;
 }
 
-.container .box {
+.box {
   border-radius: 10px;
   border: 1px solid rgb(204, 204, 204);
   display: flex;
@@ -169,7 +169,7 @@ img.socialIcon {
 }
 
 .canvas {
-  background-color: black;
+  background-color: "black";
   /* increase height of canvas */
   height: 100vh;
 }
@@ -177,4 +177,10 @@ img.socialIcon {
 .rowC {
   display: flex;
   flex-direction: row;
+}
+
+.wrapper {
+  position: relative;
+  height: 72vh;
+  width: 70vh;
 }

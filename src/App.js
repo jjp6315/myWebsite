@@ -33,35 +33,66 @@ function App() {
       <Header />
       <Home name={siteProps.name} />
       <About />
-      {/* <div className="rowc"> */}
-      <SpotifyPlaylist />
-      <Wrapper>
-        {/* <Canvas className="canvas">
-          <OrbitControls enableZoom={false} />
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <Box />
-          </Canvas>
-          <Canvas className="canvas">
-          <OrbitControls enableZoom={false} />
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <Circle />
-        </Canvas> */}
-        {/* <Canvas className="canvas">
-          <OrbitControls enableZoom={false} />
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <Iphone />
-        </Canvas> */}
-        <Canvas className="canvas">
-          <OrbitControls enableZoom={false} />
-          <ambientLight intensity={0.4} color="white" />
-          <directionalLight position={[10, 10, 5]} intensity={0.3} />
-          <Airpods />
-        </Canvas>
-      </Wrapper>
-      {/* </div> */}
+      <section
+        style={{
+          backgroundColor: "black",
+          display: "flex",
+          flexDirection: "row",
+          flex: 1,
+          justifyContent: "space-around",
+          paddingBottom: "30vh",
+        }}
+      >
+        <div
+          style={{
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <h2
+            style={{
+              color: "white",
+              paddingTop: "10vh",
+              paddingBottom: "15vh",
+              fontFamily: "San Francisco",
+              fontStyle: "normal",
+              fontSize: "4vh",
+            }}
+          >
+            Listen to My Favorite Music
+          </h2>
+          <SpotifyPlaylist />
+        </div>
+
+        <div
+          style={{
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <h2
+            style={{
+              color: "white",
+              paddingTop: "14vh",
+              paddingBottom: "15vh",
+              fontFamily: "San Francisco",
+              fontStyle: "normal",
+              fontSize: "4vh",
+            }}
+          >
+            What I listen with{" "}
+          </h2>
+          <div className="wrapper" style={{ backgroundColor: "black" }}>
+            <Canvas className="canvas">
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={0.4} color="silver" />
+              <directionalLight position={[10, 10, 5]} intensity={0.3} />
+              <Airpods />
+            </Canvas>
+          </div>
+        </div>
+      </section>
       <Portfolio />
 
       <Footer
@@ -75,9 +106,4 @@ function App() {
 
 export default App;
 
-const Wrapper = styled.div`
-  position: relative;
-  background-color: #282c34;
-  height: 60vh;
-  width: 50vh;
-`;
+//
