@@ -135,4 +135,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/airpods.gltf");
+useGLTF.preload("airpods.gltf");
