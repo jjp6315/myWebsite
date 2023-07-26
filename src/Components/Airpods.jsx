@@ -12,7 +12,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF("/airpods.gltf");
+  const { nodes, materials } = useGLTF("/airpods-transformed.glb");
 
   const groupRef = useRef();
 
@@ -135,4 +135,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("airpods.gltf");
+useGLTF.preload("/airpods-transformed.glb");
