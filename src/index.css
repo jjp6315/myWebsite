@@ -45,6 +45,15 @@ section {
   align-content: center;
 }
 
+section2 {
+  position: relative;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  background: grey;
+}
+
 section.min-height {
   min-height: 100vh;
 }
@@ -55,12 +64,12 @@ section.padding {
 
 section img.background {
   height: 100%;
-  left: 50%;
+  /* left: 50%; */
   object-fit: cover;
   pointer-events: none;
   position: absolute;
   top: 0;
-  transform: translate(-50%, 0);
+  /* transform: translate(-50%, 0); */
   width: 100vmax;
   z-index: -1;
 }
@@ -182,6 +191,6 @@ img.socialIcon {
 .wrapper {
   position: relative;
   justify-content: center;
-  align-selfs: center;
+  align-self: center;
   height: 72vh;
 }

@@ -22,7 +22,7 @@ const Footer = (props) => {
         flexDirection: "column",
         alignItems: "center",
         gap: "2.5rem",
-        padding: "5rem 0 3rem",
+        padding: "4rem 0 3rem",
         backgroundColor: primaryColor,
         width: "100%",
       }}
@@ -32,7 +32,7 @@ const Footer = (props) => {
           display: "flex",
           justifyContent: "center",
           gap: "2.5rem",
-          maxWidth: "300px", // Adjust the max width to prevent overflowing on small screens
+          // maxWidth: "300px", // Adjust the max width to prevent overflowing on small screens
           width: "100%", // Make the parent container fill the width of the screen
         }}
       >

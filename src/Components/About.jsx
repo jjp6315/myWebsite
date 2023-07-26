@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../images/motion-background.jpg";
+import image from "../images/bostonNight.jpg";
 
 const imageAltText = "purple and blue abstract background";
 
@@ -21,7 +21,7 @@ const About = () => {
       className="padding"
       id="about"
       style={{
-        backgroundColor: "black",
+        // backgroundColor: "black",
         height: "90vh",
       }}
     >

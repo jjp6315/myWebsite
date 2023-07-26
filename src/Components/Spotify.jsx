@@ -30,11 +30,11 @@ const SpotifyPlaylist = () => {
           justifyContent: "center",
           backgroundColor: "black",
         }}
-        src="https://open.spotify.com/embed/playlist/5sfpQz64WjCDr09StvRjHr?utm_source=generator"
+        src="https://open.spotify.com/embed/playlist/31WLmvzYHieK21tk2jbk2u?utm_source=generator"
         width="70%"
         height="550"
         frameBorder="0"
-        allowfullscreen=""
+        allowfullScreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
