@@ -10,17 +10,6 @@ import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
 import { Cursor, useTypewriter, Typewriter } from "react-simple-typewriter";
 
-/**
- * Home background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that
- * represents what you see in that image.
- *
- *
- * Need an image? Check out https://unsplash.com to download a photo you
- * freely use on your site.
- */
 import image from "../images/seoulNight.jpg";
 import portfolio from "../images/profile.jpg";
 
@@ -174,9 +163,13 @@ const Home = ({ name }) => {
       </div>
       <div
         style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "flex-end",
           position: "absolute",
           bottom: "3rem",
-          left: "50%",
+          // left: "40%",
+          // transform: "translate(-50%, 50%)",
         }}
       >
         <a href="#about">
@@ -186,7 +179,6 @@ const Home = ({ name }) => {
             alt={imageAltText}
           />
         </a>
-        {/* <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} /> */}
       </div>
       <div
         style={{
@@ -212,15 +204,6 @@ const Home = ({ name }) => {
       </div>
     </section>
   );
-};
-
-// Home.defaultProps = {
-//   name: "",
-//   title: "",
-// };
-
-Home.propTypes = {
-  name: PropTypes.string.isRequired,
 };
 
 export default Home;

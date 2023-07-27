@@ -47,7 +47,7 @@ const Headphone = () => {
           paddingTop: "10%",
         }}
       >
-        With Me
+        Need These?
       </h1>
 
       {isLargeScreen ? (

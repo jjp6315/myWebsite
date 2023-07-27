@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/myWebsite/static/css/main.ffa890b9.css",
-    "main.js": "/myWebsite/static/js/main.f79584db.js",
-    "static/js/787.28cb0dcd.chunk.js": "/myWebsite/static/js/787.28cb0dcd.chunk.js",
-    "static/media/seoulNight.jpg": "/myWebsite/static/media/seoulNight.5eb08675d2c7fd756238.jpg",
-    "static/media/selfie.jpg": "/myWebsite/static/media/selfie.0d00bc7f7b4540e77406.jpg",
-    "static/media/bostonNight.jpg": "/myWebsite/static/media/bostonNight.8217621f0072051e9e0b.jpg",
-    "static/media/profile.jpg": "/myWebsite/static/media/profile.bc1382b9deeb58337ea3.jpg",
-    "static/media/instagram.svg": "/myWebsite/static/media/instagram.318e6df2752736d3c45c33aed816ef9f.svg",
-    "static/media/github.svg": "/myWebsite/static/media/github.4bc72f28e79178cdc9c76db0b22c501e.svg",
-    "static/media/devdotto.svg": "/myWebsite/static/media/devdotto.0ff9f0d7b8ce0b5aa62e2f733495d83b.svg",
-    "index.html": "/myWebsite/index.html",
-    "static/media/linkedin.svg": "/myWebsite/static/media/linkedin.36bd4fb37078da2bbffc9b70a0acc872.svg",
-    "static/media/twitter.svg": "/myWebsite/static/media/twitter.9fc479687bd8af1d4abc8a1fce7dc568.svg",
-    "static/media/youtube.svg": "/myWebsite/static/media/youtube.f5a3fbc126791c9789e222f96fca742f.svg",
-    "static/media/medium.svg": "/myWebsite/static/media/medium.a73cd7178cc078152fd9eb34bd74f5ac.svg",
-    "static/media/down-arrow.svg": "/myWebsite/static/media/down-arrow.91079b27aa77759d539380d0c831ab87.svg",
-    "static/media/envelope.svg": "/myWebsite/static/media/envelope.33857507a5ba83c373a8c7d5f0d0c948.svg",
-    "main.ffa890b9.css.map": "/myWebsite/static/css/main.ffa890b9.css.map",
-    "main.f79584db.js.map": "/myWebsite/static/js/main.f79584db.js.map",
-    "787.28cb0dcd.chunk.js.map": "/myWebsite/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/static/css/main.ffa890b9.css",
+    "main.js": "/static/js/main.8149f19f.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/seoulNight.jpg": "/static/media/seoulNight.5eb08675d2c7fd756238.jpg",
+    "static/media/selfie.jpg": "/static/media/selfie.0d00bc7f7b4540e77406.jpg",
+    "static/media/bostonNight.jpg": "/static/media/bostonNight.8217621f0072051e9e0b.jpg",
+    "static/media/profile.jpg": "/static/media/profile.bc1382b9deeb58337ea3.jpg",
+    "static/media/instagram.svg": "/static/media/instagram.318e6df2752736d3c45c33aed816ef9f.svg",
+    "static/media/github.svg": "/static/media/github.4bc72f28e79178cdc9c76db0b22c501e.svg",
+    "static/media/devdotto.svg": "/static/media/devdotto.0ff9f0d7b8ce0b5aa62e2f733495d83b.svg",
+    "index.html": "/index.html",
+    "static/media/linkedin.svg": "/static/media/linkedin.36bd4fb37078da2bbffc9b70a0acc872.svg",
+    "static/media/twitter.svg": "/static/media/twitter.9fc479687bd8af1d4abc8a1fce7dc568.svg",
+    "static/media/youtube.svg": "/static/media/youtube.f5a3fbc126791c9789e222f96fca742f.svg",
+    "static/media/medium.svg": "/static/media/medium.a73cd7178cc078152fd9eb34bd74f5ac.svg",
+    "static/media/down-arrow.svg": "/static/media/down-arrow.91079b27aa77759d539380d0c831ab87.svg",
+    "static/media/envelope.svg": "/static/media/envelope.33857507a5ba83c373a8c7d5f0d0c948.svg",
+    "main.ffa890b9.css.map": "/static/css/main.ffa890b9.css.map",
+    "main.8149f19f.js.map": "/static/js/main.8149f19f.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ffa890b9.css",
-    "static/js/main.f79584db.js"
+    "static/js/main.8149f19f.js"
   ]
 }
