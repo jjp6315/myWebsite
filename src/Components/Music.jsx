@@ -23,7 +23,7 @@ const Music = () => {
       >
         <div
           style={{
-            width: "85%",
+            width: "80%",
             background:
               "linear-gradient(to bottom, rgba(30, 215, 96, 0.7), rgba(20, 20, 20, 0.5))",
             display: "inline-block",
@@ -46,7 +46,7 @@ const Music = () => {
       >
         <div
           style={{
-            width: "85%",
+            width: "80%",
             background:
               "linear-gradient(to bottom, rgb(215, 30, 1490, 0.7), rgba(0, 0, 0, 0.5))",
             display: "inline-block",

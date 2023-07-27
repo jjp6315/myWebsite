@@ -41,17 +41,8 @@ section {
   position: relative;
   width: 100vw;
   display: grid;
-  place-items: center;
-  align-content: center;
-}
-
-section2 {
-  position: relative;
-  width: 100vw;
-  display: grid;
-  place-items: center;
-  align-content: center;
-  background: grey;
+  /* place-items: center;
+  align-content: center; */
 }
 
 section.min-height {
