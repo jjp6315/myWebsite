@@ -26,49 +26,58 @@ const Home = ({ name }) => {
 
   return (
     <section id="home" className="min-height">
-      <img className="background" src={image} alt="" />
+      <div
+        style={{
+          backgroundColor: "black",
+          // objectFit: "contain",
+          overflow: "hidden",
+        }}
+      >
+        <img className="background" src={image} alt="" />
+      </div>
 
       <div
         style={{
-          flex: "1",
-          display: "flex",
-          justifyContent: "flex-start",
-          alignContent: "flex-start",
-          height: "100vh",
+          position: "absolute",
+          top: "4rem", // Top position for h1
+          left: "2rem", // Left position for h1
         }}
       >
         <h1
           style={{
             color: "white",
+            fontSize: "12vh",
           }}
         >
           Ji Woong John Park
         </h1>
       </div>
+
       <div
         style={{
-          flex: "1",
-          display: "flex",
-          justifyContent: "center",
-          alignContent: "flex-start",
-          height: "100vh",
+          position: "absolute",
+          top: "55%", // Center vertically for h2
+          left: "50%", // Center horizontally for h2
+          transform: "translate(-50%, -50%)", // Center both horizontally and vertically
         }}
       >
-        <h2 style={{ fontSize: 50, color: "white" }}>
+        <h2 style={{ fontSize: "5vh", color: "white" }}>
           I enjoy {""}
           {text1}
           <Cursor cursorStyle="_" cursorColor="white" />
         </h2>
       </div>
+
       {/* This is for the different fonts. Only works up to 4 words */}
       <div
         style={{
           display: "flex",
-          flex: "1",
           justifyContent: "center",
           alignItems: "flex-end",
           position: "absolute",
-          bottom: "3rem",
+          bottom: "3rem", // Bottom position for the icon
+          left: "50%", // Center horizontally for the icon
+          transform: "translateX(-50%)", // Center the icon horizontally
         }}
       >
         <a href="#about">
@@ -79,15 +88,16 @@ const Home = ({ name }) => {
           />
         </a>
       </div>
+
       <div
         style={{
           position: "absolute",
-          bottom: "10%",
-          left: "70%",
+          bottom: "10%", // Bottom position for the image
+          left: "70%", // Left position for the image
           borderRadius: "50%",
           border: "1px solid ivory",
-          width: "300px",
-          height: "300px",
+          width: "20vw", // Using vw for responsive width
+          height: "20vw", // Using vw for responsive height
         }}
       >
         <img
@@ -95,8 +105,8 @@ const Home = ({ name }) => {
           style={{
             borderRadius: "50%",
             objectFit: "cover",
-            width: "300px",
-            height: "300px",
+            width: "100%",
+            height: "100%",
           }}
           src={portfolio}
         />

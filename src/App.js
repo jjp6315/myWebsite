@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1000); // Adjust the breakpoint as needed
+      setIsLargeScreen(window.innerWidth >= 1); // Adjust the breakpoint as needed
     };
 
     // Add event listener to window resize

@@ -41,8 +41,16 @@ section {
   position: relative;
   width: 100vw;
   display: grid;
-  /* place-items: center;
-  align-content: center; */
+  place-items: center normal;
+  /* align-content: center; */
+}
+
+section.home {
+  position: relative;
+  width: 100vw;
+  display: grid;
+  min-height: 100vh;
+  background: grey;
 }
 
 section.min-height {
@@ -74,8 +82,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 400;
+  /* font-size: 3rem; */
+  font-weight: 600;
   margin: 0;
   padding-top: 1rem;
 }
@@ -184,4 +192,11 @@ img.socialIcon {
   justify-content: center;
   align-self: center;
   height: 72vh;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  /* background-position: center, center; */
 }
