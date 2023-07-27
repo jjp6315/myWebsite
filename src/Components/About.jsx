@@ -21,8 +21,11 @@ const About = () => {
       className="padding"
       id="about"
       style={{
-        // backgroundColor: "black",
-        height: "90vh",
+        backgroundColor: "blue",
+        minHeight: "90vh",
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       {/* Background image */}
@@ -43,15 +46,16 @@ const About = () => {
       <div
         style={{
           backgroundColor: "white",
-          width: "50%",
+          width: "80%",
           padding: "4rem",
-          margin: "3rem auto",
+          margin: "3rem auto", // Use "auto" for centering the div horizontally
           textAlign: "center",
+          flex: 1,
+          flexDirection: "column",
         }}
       >
         <h2>About Myself</h2>
         <p className="large">
-          {" "}
           After 22 years of living, I have witnessed and experienced many things
           in America and South Korea. As I graduate Penn State with a degree in
           Computer Science and a minor in Mathematics, I am looking to start my

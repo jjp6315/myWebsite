@@ -7,9 +7,10 @@ const SmallMusic = () => {
     <div
       style={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         backgroundColor: "black",
         paddingBottom: "5rem",
+        flex: 1,
       }}
     >
       <div
@@ -19,6 +20,7 @@ const SmallMusic = () => {
           textAlign: "center",
           paddingTop: "5rem",
           paddingBottom: "5rem",
+          display: "flex",
         }}
       >
         <div

@@ -195,8 +195,8 @@ img.socialIcon {
 }
 
 .background {
-  width: 100vw;
+  width: 30%;
   height: 100vh;
-  background-size: cover;
+  background-size: contain;
   /* background-position: center, center; */
 }

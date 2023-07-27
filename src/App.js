@@ -21,31 +21,42 @@ const siteProps = {
 };
 
 function App() {
-  const [isLargeScreen, setIsLargeScreen] = useState(true);
+  const [isLargeScreen, setIsLargeScreen] = useState(() => {
+    // Get the stored value from local storage, default to true if not found
+    const storedValue = localStorage.getItem("isLargeScreen");
+    return storedValue === "false" ? false : true;
+  });
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1); // Adjust the breakpoint as needed
+      setIsLargeScreen(window.innerWidth <= 800); // Adjust the breakpoint as needed
     };
-
     // Add event listener to window resize
     window.addEventListener("resize", handleResize);
-
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // Save the value to local storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("isLargeScreen", isLargeScreen);
+  }, [isLargeScreen]);
+
   return (
     <div id="Main">
       <Header />
       <Home name={siteProps.name} />
       <About />
-
-      {isLargeScreen ? <Music /> : <SmallMusic />}
-
+      {isLargeScreen ? (
+        <div>
+          <SmallMusic />
+        </div>
+      ) : (
+        <Music />
+      )}
       <Portfolio />
-
       <Footer
         {...siteProps}
         primaryColor={"#4c9365"}

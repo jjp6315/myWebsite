@@ -35,21 +35,21 @@ const Headphone = () => {
           paddingTop: "10%",
         }}
       >
-        Need These?
+        {window.innerWidth}
       </h1>
 
-      {isLargeScreen ? (
-        <div className="wrapper">
-          <Canvas className="canvas">
-            <OrbitControls enableZoom={false} />
-            <ambientLight intensity={0.4} color="snow" />
-            <directionalLight position={[10, 10, 5]} intensity={0.3} />
-            <Airpods />
-          </Canvas>
-        </div>
+      <div className="wrapper">
+        <Canvas className="canvas">
+          <OrbitControls enableZoom={false} />
+          <ambientLight intensity={0.4} color="snow" />
+          <directionalLight position={[10, 10, 5]} intensity={0.3} />
+          <Airpods />
+        </Canvas>
+      </div>
+      {/* {isLargeScreen ? (
       ) : (
         <h1>This</h1>
-      )}
+      )} */}
     </div>
   );
 };
