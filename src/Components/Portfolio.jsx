@@ -58,7 +58,17 @@ const projectList = [
 
 const Portfolio = () => {
   return (
-    <section2 className="padding" id="portfolio">
+    <div
+      style={{
+        position: "relative",
+        width: "100vw",
+        display: "grid",
+        alignSelf: "center",
+        alignContent: "Center",
+        background: "grey",
+      }}
+      id="portfolio"
+    >
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
       <div
         style={{
@@ -88,7 +98,7 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-    </section2>
+    </div>
   );
 };
 

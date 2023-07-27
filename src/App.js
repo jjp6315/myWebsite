@@ -16,6 +16,7 @@ import "./index.css";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { useState, useEffect } from "react";
 
 const siteProps = {
   name: "Ji Woong John Park",
@@ -28,6 +29,21 @@ const siteProps = {
 };
 
 function App() {
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1000); // Adjust the breakpoint as needed
+    };
+
+    // Add event listener to window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div id="Main">
       <Header />
@@ -37,30 +53,22 @@ function App() {
       <div
         style={{
           display: "flex",
-          flexDirection: "row", // Display components in a row on larger screens
+          flexDirection: "row",
           backgroundColor: "black",
           paddingBottom: "5rem",
-          // justifyContent: "center",
         }}
       >
         <div
           style={{
-            flex: 0.5, // Allow the components to share available space evenly
-            // minWidth: "50%", // Set a minimum width to prevent components from taking less than 50% of the viewport width on large screens
-            // display: "flex",
+            flex: 0.5,
             backgroundColor: "black",
             textAlign: "center",
             paddingTop: "5rem",
             paddingBottom: "5rem",
-
-            // width: "40%",
-            // boxShadow: "0 0 1px 1px white",
           }}
         >
           <div
             style={{
-              // flex: 0.45, // Allow the components to share available space evenly
-              // minWidth: "50%", // Set a minimum width to prevent components from taking less than 50% of the viewport width on large screens
               width: "85%",
               background:
                 "linear-gradient(to bottom, rgba(30, 215, 96, 0.7), rgba(20, 20, 20, 0.5))",
@@ -68,47 +76,33 @@ function App() {
               paddingBottom: "14vh",
               borderRadius: "30px",
               marginLeft: "5%",
-
-              // boxShadow: "5px 5px 5px darkgreen",
             }}
           >
             <SpotifyPlaylist />
-            {/* <h1>this</h1> */}
           </div>
         </div>
 
         <div
           style={{
-            flex: 0.5, // Allow the components to share available space evenly
-            // minWidth: "50%", // Set a minimum width to prevent components from taking less than 50% of the viewport width on large screens
-            // display: "flex",
+            flex: 0.5,
             backgroundColor: "black",
             textAlign: "center",
-            // marginRight: "10%",
             paddingTop: "5rem",
-
             paddingBottom: "5rem",
-            // boxShadow: "0 0 1px 1px white",
           }}
         >
           <div
             style={{
-              // flex: 0.55, // Allow the components to share available space evenly
-              // minWidth: "50%", // Set a minimum width to prevent components from taking less than 50% of the viewport width on large screens
-              // display: "flex",
               width: "85%",
               background:
                 "linear-gradient(to bottom, rgb(215, 30, 1490, 0.7), rgba(0, 0, 0, 0.5))",
-              // backgroundColor: "yellow",
               display: "inline-block",
               borderRadius: "30px",
               marginRight: "5%",
-              // boxShadow: "0 0 1px 1px white",
               paddingBottom: "6vh",
             }}
           >
             <Headphone />
-            {/* <h1>that</h1> */}
           </div>
         </div>
       </div>

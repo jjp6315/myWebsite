@@ -34,7 +34,7 @@ const SpotifyPlaylist = () => {
         width="70%"
         height="550"
         frameBorder="0"
-        allowfullScreen=""
+        allowFullScreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
