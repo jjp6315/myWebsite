@@ -163,9 +163,10 @@ const Home = ({ name }) => {
       </div>
       <div
         style={{
-          position: "absolute",
+          position: "fixed",
           bottom: "3rem",
           left: "50%",
+          transform: "translate(-50%, 50%)",
         }}
       >
         <a href="#about">
