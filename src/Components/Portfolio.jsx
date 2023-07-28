@@ -64,7 +64,7 @@ const Portfolio = () => {
         width: "100vw",
         display: "grid",
         alignSelf: "center",
-        alignContent: "Center",
+        alignContent: "center",
         background: "grey",
       }}
       id="portfolio"
@@ -87,7 +87,15 @@ const Portfolio = () => {
             }}
           />
         </div>
-        <div className="container">
+        <div
+          style={{
+            // display: "flex",
+            // flexDirection: "row",
+            display: "grid",
+
+            margin: "20px auto",
+          }}
+        >
           {projectList.map((project) => (
             <div className="box" key={project.title}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">

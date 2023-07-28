@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import About from "./Components/About";
@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth <= 800); // Adjust the breakpoint as needed
+      setIsLargeScreen(window.innerWidth <= 900); // Adjust the breakpoint as needed
     };
     // Add event listener to window resize
     window.addEventListener("resize", handleResize);

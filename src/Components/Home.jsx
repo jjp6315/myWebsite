@@ -29,11 +29,11 @@ const Home = ({ name }) => {
       <div
         style={{
           backgroundColor: "black",
-          // objectFit: "contain",
+          objectFit: "cover",
           // overflow: "hidden",
         }}
       >
-        {/* <img src={image} alt="" /> */}
+        <img className="background" src={image} alt="" />
       </div>
 
       <div

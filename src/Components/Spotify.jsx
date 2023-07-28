@@ -10,12 +10,10 @@ const SpotifyPlaylist = () => {
             color: "#171717",
 
             marginTop: "3vh",
-            fontSize: "10vh", // Adjusted font size for mobile
-            textAlign: "center", // Center the text on mobile
+            fontSize: "10vh",
+            textAlign: "center",
             paddingBottom: "10%",
             paddingTop: "10%",
-
-            // flex: 1,
           }}
         >
           Listen Along

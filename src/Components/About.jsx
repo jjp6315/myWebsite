@@ -5,7 +5,7 @@ const imageAltText = "purple and blue abstract background";
 
 const skillsList = [
   "Student",
-  "Computer Science",
+  "Computer",
   "Athlete",
   "Intern",
   "Reading",
@@ -21,7 +21,7 @@ const About = () => {
       className="padding"
       id="about"
       style={{
-        backgroundColor: "blue",
+        // backgroundColor: "blue",
         minHeight: "90vh",
         flex: 1,
         display: "flex",
@@ -46,12 +46,14 @@ const About = () => {
       <div
         style={{
           backgroundColor: "white",
-          width: "80%",
-          padding: "4rem",
+          // width: "100%",
+
+          padding: "2rem",
           margin: "3rem auto", // Use "auto" for centering the div horizontally
           textAlign: "center",
           flex: 1,
           flexDirection: "column",
+          maxWidth: "70vw",
         }}
       >
         <h2>About Myself</h2>
@@ -64,15 +66,27 @@ const About = () => {
         <hr />
         <ul
           style={{
-            textAlign: "left",
             columns: 2,
             fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
+            backgroundColor: "blue",
+            width: "90%",
+            flex: 1,
+            // display: "flex",
+            flexDirection: "column",
           }}
         >
           {skillsList.map((skill) => (
-            <li key={skill}>{skill}</li>
+            <li
+              style={{
+                textAlign: "start",
+                columns: 2,
+                fontSize: "1.25rem",
+                backgroundColor: "blue",
+              }}
+              key={skill}
+            >
+              {skill}
+            </li>
           ))}
         </ul>
         <hr />
