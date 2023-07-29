@@ -12,7 +12,7 @@ const Home = ({ name }) => {
     words: [
       "coding",
       "reading",
-      "playing soccer",
+      "soccer",
       "photography",
       "designing",
       "traveling",
@@ -39,14 +39,14 @@ const Home = ({ name }) => {
       <div
         style={{
           position: "absolute",
-          top: "4rem", // Top position for h1
+          top: "5rem", // Top position for h1
           left: "2rem", // Left position for h1
         }}
       >
         <h1
           style={{
             color: "white",
-            fontSize: "12vh",
+            fontSize: "7vw", // Use vw for responsive font size
           }}
         >
           Ji Woong John Park
@@ -56,13 +56,20 @@ const Home = ({ name }) => {
       <div
         style={{
           position: "absolute",
-          top: "55%", // Center vertically for h2
-          left: "50%", // Center horizontally for h2
-          transform: "translate(-50%, -50%)", // Center both horizontally and vertically
+          // backgroundColor: "grey",
+          // top: "55%", // Center vertically for h2
+          // left: "50%", // Center horizontally for h2
+          width: "100%",
+          // justifySelf: "center",
+          // alignSelf: "center",
+          textAlign: "center",
+          // transform: "translate(-50%, -50%)", // Center both horizontally and vertically
         }}
       >
-        <h2 style={{ fontSize: "5vh", color: "white" }}>
-          I enjoy {""}
+        <h2 style={{ fontSize: "5vh", color: "white", textAlign: "center" }}>
+          I enjoy{" "}
+        </h2>
+        <h2 style={{ fontSize: "5vh", color: "white", paddingLeft: "2rem" }}>
           {text1}
           <Cursor cursorStyle="_" cursorColor="white" />
         </h2>
@@ -92,8 +99,9 @@ const Home = ({ name }) => {
       <div
         style={{
           position: "absolute",
-          bottom: "10%", // Bottom position for the image
-          left: "70%", // Left position for the image
+          bottom: "10vh", // Bottom position for the image
+          right: "5%", // Left position for the image
+
           borderRadius: "50%",
           border: "1px solid ivory",
           width: "20vw", // Using vw for responsive width
@@ -105,8 +113,8 @@ const Home = ({ name }) => {
           style={{
             borderRadius: "50%",
             objectFit: "cover",
-            width: "100%",
-            height: "100%",
+            width: "20vw",
+            height: "20vw",
           }}
           src={portfolio}
         />

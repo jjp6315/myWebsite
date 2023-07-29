@@ -28,7 +28,7 @@ const siteProps = {
   medium: "",
 };
 
-function App() {
+const Homepage = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(() => {
     // Get the stored value from local storage, default to true if not found
     const storedValue = localStorage.getItem("isLargeScreen");
@@ -92,6 +92,6 @@ function App() {
       />
     </div>
   );
-}
+};
 
 export default App;

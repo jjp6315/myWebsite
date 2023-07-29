@@ -35,7 +35,7 @@ const Headphone = () => {
           paddingTop: "10%",
         }}
       >
-        {window.innerWidth}
+        What I Use
       </h1>
 
       <div className="wrapper">
