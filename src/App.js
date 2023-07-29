@@ -31,6 +31,7 @@ function App() {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth <= 900); // Adjust the breakpoint as needed
     };
+    handleResize();
     // Add event listener to window resize
     window.addEventListener("resize", handleResize);
     // Clean up the event listener on component unmount

@@ -68,11 +68,13 @@ const About = () => {
           style={{
             columns: 2,
             fontSize: "1.25rem",
-            backgroundColor: "blue",
-            width: "90%",
+            // backgroundColor: "blue",
+            width: "70%",
             flex: 1,
             // display: "flex",
+            textAlign: "center",
             flexDirection: "column",
+            marginLeft: "auto",
           }}
         >
           {skillsList.map((skill) => (
@@ -81,7 +83,7 @@ const About = () => {
                 textAlign: "start",
                 columns: 2,
                 fontSize: "1.25rem",
-                backgroundColor: "blue",
+                // backgroundColor: "blue",
               }}
               key={skill}
             >
