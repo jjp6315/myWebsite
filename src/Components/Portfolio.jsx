@@ -31,28 +31,27 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "DevPSU Learning Terminal Website",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "Try out my terminal website to learn more about me! Developed in conjunction with Jude, Brian, Alex, and Me.",
+    url: "https://jjp6315.github.io/",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Recishop",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "A shopping list builder that helps people make shopping lists from custom recipes.",
+    url: "https://github.com/Recishop/Recishop",
   },
   {
-    title: "My Resume Site",
+    title: "Twitter Clone App",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "Built Twitter clone through CodePath's Android University. Used Parse as backend.",
+    url: "https://github.com/jjp6315/SimpleTweet",
   },
   {
-    title: "GitHub Codespaces and github.dev",
-    description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+    title: "Designed Discord welcome page for Nittany Data Labs",
+    description: "Used wordpress to develope website.",
+    url: "https://ndl.psu.edu/homepage-2/discord/",
   },
 ];
 
@@ -60,16 +59,17 @@ const Portfolio = () => {
   return (
     <div
       style={{
-        position: "relative",
-        width: "100vw",
-        display: "grid",
-        alignSelf: "center",
-        alignContent: "center",
-        background: "grey",
+        background: "linear-gradient(45deg, #544a7d, #ffd452)",
+        paddingTop: "4rem",
+        paddingBottom: "3rem",
       }}
       id="portfolio"
     >
-      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
+      <h2
+        style={{ textAlign: "center", fontFamily: "cursive", fontSize: "2rem" }}
+      >
+        Portfolio
+      </h2>
       <div
         style={{
           display: "flex",

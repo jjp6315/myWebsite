@@ -7,7 +7,8 @@ import Portfolio from "./Components/Portfolio";
 import Footer from "./Components/Footer";
 import Music from "./Components/Music";
 import SmallMusic from "./Components/SmallMusic";
-import NewPage from "./Components/NewPageButton";
+import PhotoGallery from "./Components/PhotoGallery";
+import HomePage from "./Page/Homepage";
 
 import "./index.css";
 
@@ -56,39 +57,21 @@ function App() {
   return (
     <div id="Main">
       <Header />
-      <About />
       <Router>
         <Routes>
-          {/* This route is for home component
-          with exact path "/", in component props
-        we passes the imported component*/}
-          <Route exact path="" element={<Home />} />
-          {/* This route is for about component
-          with exact path "/about", in component
-        props we passes the imported component*/}
-          <Route path="/about" element={<About />} />
-          {/* This route is for contactus component
-          with exact path "/contactus", in
-        component props we passes the imported component*/}
-          <Route path="/footer" element={<Footer />} />
-          {/* If any route mismatches the upper
-          route endpoints then, redirect triggers
-        and redirects app to home component with to="/" */}
+          <Route exact path="/" element={<HomePage />} />
+
+          <Route path="/About" element={<About />} />
+
+          <Route path="/Portfolio" element={<Portfolio />} />
+
+          <Route path="/PhotoGallery" element={<PhotoGallery />} />
         </Routes>
       </Router>
-      <Home name={siteProps.name} />
-      {isLargeScreen ? (
-        <div>
-          <SmallMusic />
-        </div>
-      ) : (
-        <Music />
-      )}
-      <Portfolio />
       <Footer
         {...siteProps}
-        primaryColor={"#4c9365"}
-        secondaryColor={"#D2F1E4"}
+        primaryColor={"#000000"}
+        secondaryColor={"#000000"}
       />
     </div>
   );
