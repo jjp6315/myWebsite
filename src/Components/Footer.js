@@ -7,8 +7,7 @@ import instagramIcon from "../images/socials/instagram.svg";
 import linkedInIcon from "../images/socials/linkedin.svg";
 
 const Footer = (props) => {
-  const { email, gitHub, linkedIn, instagram, medium, name, primaryColor } =
-    props;
+  const { email, gitHub, linkedIn, instagram, name, primaryColor } = props;
 
   return (
     <div
