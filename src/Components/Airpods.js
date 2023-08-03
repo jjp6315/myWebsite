@@ -17,10 +17,7 @@ export default function Model(props) {
   const groupRef = useRef();
 
   useFrame(() => {
-    // You can adjust the rotation speed and direction here
     groupRef.current.rotation.y -= 0.01; // Rotate around the Y-axis
-    // groupRef.current.rotation.x += 0.01; // Rotate around the X-axis
-    // groupRef.current.rotation.z += 0.01; // Rotate around the Z-axis
   });
 
   return (

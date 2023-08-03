@@ -98,7 +98,7 @@ const Gallery = () => {
         display: "flex",
         // backgroundColor: "yellow",
         alignSelf: "center",
-        marginTop: "25%",
+        marginTop: "30%",
         // overflowX: "auto", // Enable horizontal scrolling
         maxWidth: "100%", // Prevent the container from extending beyond the screen width
         // justifyContent: "center",

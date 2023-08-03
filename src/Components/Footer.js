@@ -1,14 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import devDotToIcon from "../images/socials/devdotto.svg";
 import envelopeIcon from "../images/socials/envelope.svg";
 import gitHubIcon from "../images/socials/github.svg";
 import instagramIcon from "../images/socials/instagram.svg";
 import linkedInIcon from "../images/socials/linkedin.svg";
-import mediumIcon from "../images/socials/medium.svg";
-import twitterIcon from "../images/socials/twitter.svg";
-import youTubeIcon from "../images/socials/youtube.svg";
 
 const Footer = (props) => {
   const { email, gitHub, linkedIn, instagram, medium, name, primaryColor } =
@@ -33,8 +29,7 @@ const Footer = (props) => {
           display: "flex",
           justifyContent: "center",
           gap: "2.5rem",
-          // maxWidth: "300px", // Adjust the max width to prevent overflowing on small screens
-          width: "100%", // Make the parent container fill the width of the screen
+          width: "100%",
         }}
       >
         {email && (
@@ -57,15 +52,6 @@ const Footer = (props) => {
             <img src={linkedInIcon} alt="LinkedIn" className="socialIcon" />
           </a>
         )}
-        {medium && (
-          <a
-            href={`https://medium.com/@${medium}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={mediumIcon} alt="Medium" className="socialIcon" />
-          </a>
-        )}
       </div>
       <p className="small" style={{ marginTop: 0, color: "white" }}>
         Created by {name}
@@ -79,16 +65,12 @@ Footer.defaultProps = {
 };
 
 Footer.propTypes = {
-  devDotTo: PropTypes.string,
   email: PropTypes.string,
   gitHub: PropTypes.string,
   instagram: PropTypes.string,
   linkedIn: PropTypes.string,
-  medium: PropTypes.string,
   name: PropTypes.string.isRequired,
   primaryColor: PropTypes.string,
-  twitter: PropTypes.string,
-  youTube: PropTypes.string,
 };
 
 export default Footer;

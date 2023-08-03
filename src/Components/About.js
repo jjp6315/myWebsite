@@ -21,14 +21,12 @@ const About = () => {
       className="padding"
       id="about"
       style={{
-        // backgroundColor: "blue",
         minHeight: "90vh",
         flex: 1,
         display: "flex",
         flexDirection: "column",
       }}
     >
-      {/* Background image */}
       <img
         className="background"
         src={image}
@@ -46,10 +44,9 @@ const About = () => {
       <div
         style={{
           backgroundColor: "white",
-          // width: "100%",
 
           padding: "2rem",
-          margin: "3rem auto", // Use "auto" for centering the div horizontally
+          margin: "3rem auto",
           textAlign: "center",
           flex: 1,
           flexDirection: "column",
@@ -68,10 +65,8 @@ const About = () => {
           style={{
             columns: 2,
             fontSize: "1.25rem",
-            // backgroundColor: "blue",
             width: "70%",
             flex: 1,
-            // display: "flex",
             textAlign: "center",
             flexDirection: "column",
             marginLeft: "auto",
@@ -83,7 +78,6 @@ const About = () => {
                 textAlign: "start",
                 columns: 2,
                 fontSize: "1.25rem",
-                // backgroundColor: "blue",
               }}
               key={skill}
             >

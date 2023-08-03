@@ -13,6 +13,7 @@ const Music = () => {
         flex: 1,
         display: "flex",
       }}
+      id="music"
     >
       <div
         style={{

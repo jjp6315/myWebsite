@@ -66,7 +66,7 @@ const Portfolio = () => {
       id="portfolio"
     >
       <h2
-        style={{ textAlign: "center", fontFamily: "cursive", fontSize: "2rem" }}
+        style={{ textAlign: "center", fontFamily: "cursive", fontSize: "3rem" }}
       >
         Portfolio
       </h2>
@@ -105,6 +105,49 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div
+        style={{
+          paddingTop: "3rem",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontFamily: "Helvetica Neue",
+            fontSize: "2rem",
+          }}
+        >
+          Skills
+        </h2>
+        <ul
+          style={{
+            textAlign: "center",
+            fontFamily: "Helvetica Neue",
+            fontSize: "2rem",
+          }}
+        >
+          Programming: Python | TypeScript | C | Git | React Native | SQL |
+          JavaScript | Pandas
+        </ul>
+        <ul
+          style={{
+            textAlign: "center",
+            fontFamily: "Helvetica Neue",
+            fontSize: "2rem",
+          }}
+        >
+          Skills: Coachable, Motivated, Scrum, Agile Development, Flexible
+        </ul>
+        <ul
+          style={{
+            textAlign: "center",
+            fontFamily: "Helvetica Neue",
+            fontSize: "2rem",
+          }}
+        >
+          Languages: English (native), Korean (fluent)
+        </ul>
       </div>
     </div>
   );

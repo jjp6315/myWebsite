@@ -16,7 +16,7 @@ const Home = ({ name }) => {
       "photography",
       "designing",
       "traveling",
-      "creating",
+      "creativity",
     ],
     loop: true,
     deleteSpeed: 50,
@@ -56,14 +56,8 @@ const Home = ({ name }) => {
       <div
         style={{
           position: "absolute",
-          // backgroundColor: "grey",
-          // top: "55%", // Center vertically for h2
-          // left: "50%", // Center horizontally for h2
           width: "100%",
-          // justifySelf: "center",
-          // alignSelf: "center",
           textAlign: "center",
-          // transform: "translate(-50%, -50%)", // Center both horizontally and vertically
         }}
       >
         <h2 style={{ fontSize: "5vh", color: "white", textAlign: "center" }}>
@@ -87,7 +81,7 @@ const Home = ({ name }) => {
           transform: "translateX(-50%)", // Center the icon horizontally
         }}
       >
-        <a href="#about">
+        <a href="#music">
           <img
             src={arrowSvg}
             style={{ height: "3rem", width: "3rem" }}
