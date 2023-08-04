@@ -15,7 +15,7 @@ import water from "../images/water.jpg";
 import bostonselfie from "../images/bostonselfie.jpg";
 
 const Gallery = () => {
-  const trackRef = useRef(null); // Create a ref for the track element
+  const trackRef = useRef(null);
 
   const handleOnDown = (e) => {
     if (trackRef.current) {
@@ -90,23 +90,19 @@ const Gallery = () => {
         handleOnMove(e.touches[0])
       );
     };
-  }, []); // Empty dependency array to add the event listeners only once
+  }, []);
 
   return (
     <div
       style={{
         display: "flex",
-        // backgroundColor: "yellow",
         alignSelf: "center",
         marginTop: "30%",
-        // overflowX: "auto", // Enable horizontal scrolling
-        maxWidth: "100%", // Prevent the container from extending beyond the screen width
-        // justifyContent: "center",
       }}
     >
       <div
         id="image-track"
-        ref={trackRef} // Use the ref here to reference the element
+        ref={trackRef}
         data-mouse-down-at="0"
         data-prev-percentage="0"
       >

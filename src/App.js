@@ -4,8 +4,9 @@ import Header from "./Components/Header";
 import About from "./Components/About";
 import Portfolio from "./Components/Portfolio";
 import Footer from "./Components/Footer";
-import PhotoGallery from "./Components/PhotoGallery";
 import HomePage from "./Page/Homepage";
+import PhotoPage from "./Page/PhotoPage";
+import PhotoGallery from "./Components/PhotoGallery";
 
 import "./index.css";
 
@@ -56,7 +57,7 @@ function App() {
 
           <Route path="/Portfolio" element={<Portfolio />} />
 
-          <Route path="/PhotoGallery" element={<PhotoGallery />} />
+          <Route path="/PhotoGallery" element={<PhotoPage />} />
         </Routes>
       </Router>
       <Footer

@@ -1,6 +1,5 @@
 import React from "react";
 import SpotifyPlaylist from "./Spotify";
-import Headphone from "./Headphone";
 
 const SmallMusic = () => {
   return (
