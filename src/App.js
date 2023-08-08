@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { createContext, useState, useEffect, useContext } from "react";
 import Header from "./Components/Header";
 import About from "./Components/About";
@@ -9,8 +9,9 @@ import PhotoPage from "./Page/PhotoPage";
 import PhotoGallery from "./Components/PhotoGallery";
 
 import "./index.css";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import { initReactI18next, useTranslation } from "react-i18next";
 
 const siteProps = {
   name: "Ji Woong John Park",
@@ -47,25 +48,27 @@ function App() {
   }, [isLargeScreen]);
 
   return (
-    <div id="Main">
-      <Header />
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
+    <Suspense fallback={<div>Loading...</div>}>
+      <div id="Main">
+        <Header />
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
 
-          <Route path="/About" element={<About />} />
+            <Route path="/About" element={<About />} />
 
-          <Route path="/Portfolio" element={<Portfolio />} />
+            <Route path="/Portfolio" element={<Portfolio />} />
 
-          <Route path="/PhotoGallery" element={<PhotoPage />} />
-        </Routes>
-      </Router>
-      <Footer
-        {...siteProps}
-        primaryColor={"#000000"}
-        secondaryColor={"#000000"}
-      />
-    </div>
+            <Route path="/PhotoGallery" element={<PhotoPage />} />
+          </Routes>
+        </Router>
+        <Footer
+          {...siteProps}
+          primaryColor={"#000000"}
+          secondaryColor={"#000000"}
+        />
+      </div>
+    </Suspense>
   );
 }
 

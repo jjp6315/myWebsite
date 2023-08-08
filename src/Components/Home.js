@@ -1,13 +1,33 @@
-import React from "react";
+import React, { Suspense, useState } from "react";
 import arrowSvg from "../images/down-arrow.svg";
 import { Cursor, useTypewriter, Typewriter } from "react-simple-typewriter";
+import { useLanguage } from "../LanguageContext";
 
 import image from "../images/seoulNight.jpg";
 import portfolio from "../images/profile.jpg";
 
+import i18n from "i18next";
+import { initReactI18next, useTranslation } from "react-i18next";
+
+const translationEn = { welcome: "Ji Woong Parky" };
+const translationKr = { welcome: "안녕하세요 제 이름은 지웅입니다" };
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: translationEn },
+    kr: { translation: translationKr },
+  },
+  lng: "en",
+  fallbackLng: "en",
+  interpolation: { escapeValue: false },
+});
+
 const imageAltText = "Korea night view at 남산타워";
 
 const Home = ({ name }) => {
+  const { t } = useTranslation();
+  const { selectedLanguage, toggleLanguage } = useLanguage();
+
   const [text1] = useTypewriter({
     words: [
       "coding",
@@ -25,95 +45,98 @@ const Home = ({ name }) => {
   // This is for the different fonts. Only works up to 4 words
 
   return (
-    <section id="home" className="min-height">
-      <div
-        style={{
-          backgroundColor: "black",
-          objectFit: "cover",
-          // overflow: "hidden",
-        }}
-      >
-        <img className="background" src={image} alt="" />
-      </div>
-
-      <div
-        style={{
-          position: "absolute",
-          top: "5rem", // Top position for h1
-          left: "2rem", // Left position for h1
-        }}
-      >
-        <h1
+    <Suspense fallback={<div>Loading...</div>}>
+      <section id="home" className="min-height">
+        <div
           style={{
-            color: "white",
-            fontSize: "7vw", // Use vw for responsive font size
+            backgroundColor: "black",
+            objectFit: "cover",
           }}
         >
-          Ji Woong John Park
-        </h1>
-      </div>
+          <img className="background" src={image} alt="" />
+        </div>
 
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          textAlign: "center",
-        }}
-      >
-        <h2 style={{ fontSize: "5vh", color: "white", textAlign: "center" }}>
-          I enjoy{" "}
-        </h2>
-        <h2 style={{ fontSize: "5vh", color: "white", paddingLeft: "2rem" }}>
-          {text1}
-          <Cursor cursorStyle="_" cursorColor="white" />
-        </h2>
-      </div>
-
-      {/* This is for the different fonts. Only works up to 4 words */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-end",
-          position: "absolute",
-          bottom: "3rem", // Bottom position for the icon
-          left: "50%", // Center horizontally for the icon
-          transform: "translateX(-50%)", // Center the icon horizontally
-        }}
-      >
-        <a href="#music">
-          <img
-            src={arrowSvg}
-            style={{ height: "3rem", width: "3rem" }}
-            alt={imageAltText}
-          />
-        </a>
-      </div>
-
-      <div
-        style={{
-          position: "absolute",
-          bottom: "10vh", // Bottom position for the image
-          right: "5%", // Left position for the image
-
-          borderRadius: "50%",
-          border: "1px solid ivory",
-          width: "20vw", // Using vw for responsive width
-          height: "20vw", // Using vw for responsive height
-        }}
-      >
-        <img
-          className="profile"
+        <div
           style={{
-            borderRadius: "50%",
-            objectFit: "cover",
-            width: "20vw",
-            height: "20vw",
+            position: "absolute",
+            top: "5rem",
+            left: "2rem",
           }}
-          src={portfolio}
-        />
-      </div>
-    </section>
+        >
+          <h1
+            style={{
+              color: "white",
+              fontSize: "7vw", // Use vw for responsive font size
+            }}
+          >
+            {/* {selectedLanguage === "en" ? t("welcome") : t("welcome")} */}
+            {i18n.t("welcome")}
+          </h1>
+          <button onClick={toggleLanguage}>Toggle Language</button>
+        </div>
+
+        <div
+          style={{
+            position: "absolute",
+            width: "100%",
+            textAlign: "center",
+          }}
+        >
+          <h2 style={{ fontSize: "5vh", color: "white", textAlign: "center" }}>
+            I enjoy{" "}
+          </h2>
+          <h2 style={{ fontSize: "5vh", color: "white", paddingLeft: "2rem" }}>
+            {text1}
+            <Cursor cursorStyle="_" cursorColor="white" />
+          </h2>
+        </div>
+
+        {/* This is for the different fonts. Only works up to 4 words */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-end",
+            position: "absolute",
+            bottom: "3rem", // Bottom position for the icon
+            left: "50%", // Center horizontally for the icon
+            transform: "translateX(-50%)", // Center the icon horizontally
+          }}
+        >
+          <a href="#music">
+            <img
+              src={arrowSvg}
+              style={{ height: "3rem", width: "3rem" }}
+              alt={imageAltText}
+            />
+          </a>
+        </div>
+
+        <div
+          style={{
+            position: "absolute",
+            bottom: "10vh", // Bottom position for the image
+            right: "5%", // Left position for the image
+
+            borderRadius: "50%",
+            border: "1px solid ivory",
+            width: "20vw", // Using vw for responsive width
+            height: "20vw", // Using vw for responsive height
+          }}
+        >
+          <img
+            className="profile"
+            style={{
+              borderRadius: "50%",
+              objectFit: "cover",
+              width: "20vw",
+              height: "20vw",
+            }}
+            src={portfolio}
+          />
+        </div>
+      </section>
+    </Suspense>
   );
 };
 

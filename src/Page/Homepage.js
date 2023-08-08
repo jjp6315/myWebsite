@@ -4,6 +4,7 @@ import Header from "../Components/Header";
 import Home from "../Components/Home";
 import Music from "../Components/Music";
 import SmallMusic from "../Components/SmallMusic";
+import LanguageToggle from "../Components/LanguageToggle";
 
 import "../index.css";
 
@@ -46,6 +47,7 @@ const Homepage = () => {
     <div id="Main">
       <Header />
       <Home name={siteProps.name} />
+      <LanguageToggle />
       {isLargeScreen ? (
         <div>
           <SmallMusic />
