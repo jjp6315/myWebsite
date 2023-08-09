@@ -249,7 +249,7 @@ img.socialIcon {
   display: block;
   width: 200%;
   margin-left: -100%;
-  transition: margin 0.2s;
+  /* transition: margin 0.2s; */
 }
 
 .toggle-switch-inner:before,

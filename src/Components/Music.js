@@ -9,7 +9,6 @@ const Music = () => {
         display: "flex",
         flexDirection: "row",
         backgroundColor: "black",
-        paddingBottom: "5rem",
         flex: 1,
         display: "flex",
       }}
