@@ -6,17 +6,19 @@ const LanguageToggle = () => {
   const { selectedLanguage, toggleLanguage } = useLanguage();
 
   return (
-    <div className="switch">
+    <div className="toggle-switch">
       <input
-        id="language-toggle"
-        className="check-toggle check-toggle-round-flat"
         type="checkbox"
+        className="toggle-switch-checkbox"
         checked={selectedLanguage === "kr"}
         onChange={toggleLanguage}
+        name="toggleSwitch"
+        id="toggleSwitch"
       />
-      <label htmlFor="language-toggle"></label>
-      <span className="on">En</span>
-      <span className="off">Kr</span>
+      <label className="toggle-switch-label" htmlFor="toggleSwitch">
+        <span className="toggle-switch-inner"></span>
+        <span className="toggle-switch-switch"></span>
+      </label>
     </div>
   );
 };

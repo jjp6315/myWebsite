@@ -1,6 +1,12 @@
 import React from "react";
+import i18n from "i18next";
+import { initReactI18next, useTranslation } from "react-i18next";
+import { useLanguage } from "../LanguageContext";
 
 const SpotifyPlaylist = () => {
+  const { t } = useTranslation();
+  const { selectedLanguage, toggleLanguage } = useLanguage();
+
   return (
     <div>
       <div>
@@ -8,7 +14,6 @@ const SpotifyPlaylist = () => {
           style={{
             fontFamily: "Helvetica",
             color: "#171717",
-
             marginTop: "3vh",
             fontSize: "10vh",
             textAlign: "center",
@@ -28,7 +33,9 @@ const SpotifyPlaylist = () => {
           justifyContent: "center",
           backgroundColor: "black",
         }}
-        src="https://open.spotify.com/embed/playlist/31WLmvzYHieK21tk2jbk2u?utm_source=generator"
+        src={
+          selectedLanguage === "en" ? t("spotify") : t("spotify", { lng: "kr" })
+        }
         width="70%"
         height="550"
         frameBorder="0"

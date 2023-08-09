@@ -45,9 +45,7 @@ const Homepage = () => {
 
   return (
     <div id="Main">
-      <Header />
       <Home name={siteProps.name} />
-      <LanguageToggle />
       {isLargeScreen ? (
         <div>
           <SmallMusic />

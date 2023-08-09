@@ -9,19 +9,6 @@ import portfolio from "../images/profile.jpg";
 import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 
-const translationEn = { welcome: "Ji Woong Park" };
-const translationKr = { welcome: "박지웅의 홈페이지" };
-
-i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: translationEn },
-    kr: { translation: translationKr },
-  },
-  lng: "en",
-  fallbackLng: "en",
-  interpolation: { escapeValue: false },
-});
-
 const imageAltText = "Korea night view at 남산타워";
 
 const Home = ({ name }) => {
@@ -59,7 +46,7 @@ const Home = ({ name }) => {
         <div
           style={{
             position: "absolute",
-            top: "5rem",
+            top: "2rem",
             left: "2rem",
           }}
         >
@@ -73,7 +60,6 @@ const Home = ({ name }) => {
               ? t("welcome")
               : t("welcome", { lng: "kr" })}
           </h1>
-          {/* <button onClick={toggleLanguage}>Toggle Language</button> */}
         </div>
 
         <div
