@@ -1,4 +1,5 @@
 import React from "react";
+import LanguageToggle from "./LanguageToggle";
 
 const Header = () => {
   return (
@@ -21,9 +22,10 @@ const Header = () => {
       }}
     >
       <a href="/">Home</a>
-      <a href="/About">About</a>
+      <a href="/AboutPage">About</a>
       <a href="/Portfolio">Portfolio</a>
       <a href="/PhotoGallery">Gallery</a>
+      <LanguageToggle />
     </div>
   );
 };

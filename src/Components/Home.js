@@ -9,8 +9,8 @@ import portfolio from "../images/profile.jpg";
 import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 
-const translationEn = { welcome: "Ji Woong Parky" };
-const translationKr = { welcome: "안녕하세요 제 이름은 지웅입니다" };
+const translationEn = { welcome: "Ji Woong Park" };
+const translationKr = { welcome: "박지웅의 홈페이지" };
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -69,10 +69,11 @@ const Home = ({ name }) => {
               fontSize: "7vw", // Use vw for responsive font size
             }}
           >
-            {/* {selectedLanguage === "en" ? t("welcome") : t("welcome")} */}
-            {i18n.t("welcome")}
+            {selectedLanguage === "en"
+              ? t("welcome")
+              : t("welcome", { lng: "kr" })}
           </h1>
-          <button onClick={toggleLanguage}>Toggle Language</button>
+          {/* <button onClick={toggleLanguage}>Toggle Language</button> */}
         </div>
 
         <div

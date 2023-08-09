@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { createContext, useState, useEffect, useContext } from "react";
 import Header from "./Components/Header";
-import About from "./Components/About";
+import AboutPage from "./Page/AboutPage";
 import Portfolio from "./Components/Portfolio";
 import Footer from "./Components/Footer";
 import HomePage from "./Page/Homepage";
@@ -55,7 +55,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<HomePage />} />
 
-            <Route path="/About" element={<About />} />
+            <Route path="/AboutPage" element={<AboutPage />} />
 
             <Route path="/Portfolio" element={<Portfolio />} />
 
