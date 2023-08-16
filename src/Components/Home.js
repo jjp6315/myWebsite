@@ -46,7 +46,7 @@ const Home = ({ name }) => {
         <div
           style={{
             position: "absolute",
-            top: "2rem",
+            top: "6rem",
             left: "2rem",
           }}
         >
@@ -85,7 +85,7 @@ const Home = ({ name }) => {
             justifyContent: "center",
             alignItems: "flex-end",
             position: "absolute",
-            bottom: "5rem", // Bottom position for the icon
+            bottom: "1rem", // Bottom position for the icon
             left: "50%", // Center horizontally for the icon
             transform: "translateX(-50%)", // Center the icon horizontally
           }}

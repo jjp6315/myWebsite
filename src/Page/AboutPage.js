@@ -1,5 +1,8 @@
 import React from "react";
 import image from "../images/bostonNight.jpg";
+import { useLanguage } from "../LanguageContext";
+
+import { initReactI18next, useTranslation } from "react-i18next";
 
 const imageAltText = "purple and blue abstract background";
 
@@ -16,6 +19,9 @@ const detailOrQuote =
   "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
 
 const About = () => {
+  const { t } = useTranslation();
+  const { selectedLanguage, toggleLanguage } = useLanguage();
+
   return (
     <section
       className="padding"
@@ -55,10 +61,7 @@ const About = () => {
       >
         <h2>About Myself</h2>
         <p className="large">
-          After 22 years of living, I have witnessed and experienced many things
-          in America and South Korea. As I graduate Penn State with a degree in
-          Computer Science and a minor in Mathematics, I am looking to start my
-          career in the tech industry.
+          {selectedLanguage === "en" ? t("about") : t("about", { lng: "kr" })}
         </p>
         <hr />
         <ul

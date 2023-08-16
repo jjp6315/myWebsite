@@ -5,11 +5,12 @@ const Header = () => {
   return (
     <div
       style={{
+        position: "fixed",
         display: "flex",
         flex: 1,
         justifyContent: "space-between",
         alignItems: "center",
-        background: "rgba(23, 23, 23, 0.85)",
+        background: "	#212121",
         paddingTop: "1rem",
         paddingBottom: "1rem",
         paddingLeft: "2rem",
