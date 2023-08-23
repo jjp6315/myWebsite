@@ -21,7 +21,7 @@ const SpotifyPlaylist = () => {
             paddingTop: "10%",
           }}
         >
-          Listen Along
+          {selectedLanguage === "en" ? t("listen") : t("listen", { lng: "kr" })}
         </h1>
       </div>
 

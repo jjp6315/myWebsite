@@ -1,6 +1,6 @@
 import React from "react";
 import { useLanguage } from "../LanguageContext";
-import "../index.css"; // Import the CSS file for styling
+import "../index.css";
 
 const LanguageToggle = () => {
   const { selectedLanguage, toggleLanguage } = useLanguage();

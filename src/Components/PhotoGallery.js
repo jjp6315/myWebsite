@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-
+import React, { useEffect, useRef } from "react";
 import library from "../images/library.jpg";
 import waterskyline from "../images/waterskyline.jpg";
 import tunnel from "../images/tunnel.jpg";

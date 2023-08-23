@@ -1,12 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Header from "../Components/Header";
 import Home from "../Components/Home";
 import Music from "../Components/Music";
 import SmallMusic from "../Components/SmallMusic";
-import LanguageToggle from "../Components/LanguageToggle";
-
-import "../index.css";
 
 const siteProps = {
   name: "Ji Woong John Park",

@@ -1,13 +1,11 @@
 import React, { Suspense, useState } from "react";
 import arrowSvg from "../images/down-arrow.svg";
-import { Cursor, useTypewriter, Typewriter } from "react-simple-typewriter";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { useLanguage } from "../LanguageContext";
 
 import image from "../images/seoulNight.jpg";
 import portfolio from "../images/profile.jpg";
-
-import i18n from "i18next";
-import { initReactI18next, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const imageAltText = "Korea night view at 남산타워";
 
@@ -53,7 +51,7 @@ const Home = ({ name }) => {
           <h1
             style={{
               color: "white",
-              fontSize: "7vw", // Use vw for responsive font size
+              fontSize: "7vw",
             }}
           >
             {selectedLanguage === "en"
