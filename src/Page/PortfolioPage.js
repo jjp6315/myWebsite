@@ -1,5 +1,5 @@
 import React from "react";
-
+import Resume from "../Components/Resume";
 import image from "../images/museum.jpg";
 
 const projectList = [
@@ -79,48 +79,8 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-      <div
-        style={{
-          paddingTop: "3rem",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontFamily: "Helvetica Neue",
-            fontSize: "2rem",
-          }}
-        >
-          Skills
-        </h2>
-        <ul
-          style={{
-            textAlign: "center",
-            fontFamily: "Helvetica Neue",
-            fontSize: "2rem",
-          }}
-        >
-          Programming: Python | TypeScript | C | Git | React Native | SQL |
-          JavaScript | Pandas
-        </ul>
-        <ul
-          style={{
-            textAlign: "center",
-            fontFamily: "Helvetica Neue",
-            fontSize: "2rem",
-          }}
-        >
-          Skills: Coachable, Motivated, Scrum, Agile Development, Flexible
-        </ul>
-        <ul
-          style={{
-            textAlign: "center",
-            fontFamily: "Helvetica Neue",
-            fontSize: "2rem",
-          }}
-        >
-          Languages: English (native), Korean (fluent)
-        </ul>
+      <div style={{ textAlign: "center", paddingTop: "3rem" }}>
+        <Resume />
       </div>
     </div>
   );

@@ -2,11 +2,10 @@ import React, { Suspense } from "react";
 import { createContext, useState, useEffect, useContext } from "react";
 import Header from "./Components/Header";
 import AboutPage from "./Page/AboutPage";
-import Portfolio from "./Components/Portfolio";
+import Portfolio from "./Page/PortfolioPage";
 import Footer from "./Components/Footer";
 import HomePage from "./Page/Homepage";
 import PhotoPage from "./Page/PhotoPage";
-import PhotoGallery from "./Components/PhotoGallery";
 
 import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
