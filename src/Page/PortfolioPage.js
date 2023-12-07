@@ -1,8 +1,14 @@
 import React from "react";
-
+import Resume from "../Components/Resume";
 import image from "../images/museum.jpg";
 
 const projectList = [
+  {
+    title: "Neural Network Signature and Number Recognition",
+    description:
+      "Configured images to train a Convolution Neural Network model. The model trains on handwritten signature and number images to recognize the author and number.",
+    url: "https://github.com/EE456FinalProject/ImageClassification",
+  },
   {
     title: "DevPSU Learning Terminal Website",
     description:
@@ -20,11 +26,6 @@ const projectList = [
     description:
       "Built Twitter clone through CodePath's Android University. Used Parse as backend.",
     url: "https://github.com/jjp6315/SimpleTweet",
-  },
-  {
-    title: "Designed Discord welcome page for Nittany Data Labs",
-    description: "Used wordpress to develope website.",
-    url: "https://ndl.psu.edu/homepage-2/discord/",
   },
 ];
 
@@ -79,48 +80,8 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-      <div
-        style={{
-          paddingTop: "3rem",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontFamily: "Helvetica Neue",
-            fontSize: "2rem",
-          }}
-        >
-          Skills
-        </h2>
-        <ul
-          style={{
-            textAlign: "center",
-            fontFamily: "Helvetica Neue",
-            fontSize: "2rem",
-          }}
-        >
-          Programming: Python | TypeScript | C | Git | React Native | SQL |
-          JavaScript | Pandas
-        </ul>
-        <ul
-          style={{
-            textAlign: "center",
-            fontFamily: "Helvetica Neue",
-            fontSize: "2rem",
-          }}
-        >
-          Skills: Coachable, Motivated, Scrum, Agile Development, Flexible
-        </ul>
-        <ul
-          style={{
-            textAlign: "center",
-            fontFamily: "Helvetica Neue",
-            fontSize: "2rem",
-          }}
-        >
-          Languages: English (native), Korean (fluent)
-        </ul>
+      <div style={{ textAlign: "center", paddingTop: "3rem" }}>
+        <Resume />
       </div>
     </div>
   );
