@@ -4,6 +4,12 @@ import image from "../images/museum.jpg";
 
 const projectList = [
   {
+    title: "Neural Network Signature and Number Recognition",
+    description:
+      "Configured images to train a Convolution Neural Network model. The model trains on handwritten signature and number images to recognize the author and number.",
+    url: "https://github.com/EE456FinalProject/ImageClassification",
+  },
+  {
     title: "DevPSU Learning Terminal Website",
     description:
       "Try out my terminal website to learn more about me! Developed in conjunction with Jude, Brian, Alex, and Me.",
@@ -20,11 +26,6 @@ const projectList = [
     description:
       "Built Twitter clone through CodePath's Android University. Used Parse as backend.",
     url: "https://github.com/jjp6315/SimpleTweet",
-  },
-  {
-    title: "Designed Discord welcome page for Nittany Data Labs",
-    description: "Used wordpress to develope website.",
-    url: "https://ndl.psu.edu/homepage-2/discord/",
   },
 ];
 

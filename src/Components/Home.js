@@ -4,7 +4,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { useLanguage } from "../LanguageContext";
 
 import image from "../images/seoulNight.jpg";
-import portfolio from "../images/profile.jpg";
+import portfolio from "../images/Profile1.jpg";
 import { useTranslation } from "react-i18next";
 
 const imageAltText = "Korea night view at 남산타워";
