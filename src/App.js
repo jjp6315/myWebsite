@@ -10,6 +10,8 @@ import PhotoPage from "./Page/PhotoPage";
 import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import { initReactI18next, useTranslation } from "react-i18next";
+
 const siteProps = {
   name: "Ji Woong John Park",
   title: "Computer Science Student",

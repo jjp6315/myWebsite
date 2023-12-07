@@ -1,7 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
+
 import SmallPhotoGallery from "../Components/SmallPhotoGallery";
 import PhotoGallery from "../Components/PhotoGallery";
+import "../index.css";
 
 const Homepage = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(() => {

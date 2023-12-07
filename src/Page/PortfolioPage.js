@@ -1,7 +1,34 @@
-import React from "react";
-import Resume from "../Components/Resume";
-import image from "../images/museum.jpg";
+/**
+ * Portfolio component
+ *
+ * Highlights some of  your creations. These can be designs, websites,
+ * open source contributions, articles you've written and more.
+ *
+ * This is a great area for you to to continually add to and refine
+ * as you continue to learn and create.
+ */
 
+import React from "react";
+
+/**
+ * Desk image
+ *
+ * Below is a sample desk image. Feel free to update this to an image of your choice,
+ * updating below imageAltText to string that represents what you see in that image.
+ *
+ * Need an image? Check out https://unsplash.com to download a photo you
+ * freely use on your site.
+ */
+import image from "../images/selfie.jpg";
+
+const imageAltText = "desktop with books and laptop";
+
+/**
+ * Project list
+ *
+ * An array of objects that will be used to display for your project
+ * links section. Below is a sample, update to reflect links you'd like to highlight.
+ */
 const projectList = [
   {
     title: "Neural Network Signature and Number Recognition",
@@ -33,7 +60,7 @@ const Portfolio = () => {
   return (
     <div
       style={{
-        background: "linear-gradient(45deg, #9db0a2, #688c71)",
+        background: "linear-gradient(45deg, #544a7d, #ffd452)",
         paddingTop: "4rem",
         paddingBottom: "3rem",
       }}
