@@ -20,6 +20,7 @@ import React from "react";
  * freely use on your site.
  */
 import image from "../images/selfie.jpg";
+import Resume from "../Components/Resume";
 
 const imageAltText = "desktop with books and laptop";
 
