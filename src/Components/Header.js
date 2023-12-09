@@ -1,7 +1,11 @@
 import React from "react";
 import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "../LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation();
+  const { selectedLanguage, toggleLanguage } = useLanguage();
   return (
     <div
       style={{
@@ -21,10 +25,22 @@ const Header = () => {
       }}
     >
       <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-        <a href="/">Home</a>
-        <a href="/AboutPage">About</a>
-        <a href="/Portfolio">Portfolio</a>
-        <a href="/PhotoGallery">Gallery</a>
+        <a href="/">
+          {selectedLanguage === "en" ? t("home") : t("home", { lng: "kr" })}
+        </a>
+        <a href="/AboutPage">
+          {selectedLanguage === "en" ? t("about") : t("about", { lng: "kr" })}
+        </a>
+        <a href="/Portfolio">
+          {selectedLanguage === "en"
+            ? t("portfolio")
+            : t("portfolio", { lng: "kr" })}
+        </a>
+        <a href="/PhotoGallery">
+          {selectedLanguage === "en"
+            ? t("gallery")
+            : t("gallery", { lng: "kr" })}
+        </a>
       </div>
       <div style={{ paddingRight: "3rem" }}>
         <LanguageToggle />

@@ -1,8 +1,7 @@
 import React from "react";
 import image from "../images/bostonNight.jpg";
 import { useLanguage } from "../LanguageContext";
-
-import { initReactI18next, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const imageAltText = "purple and blue abstract background";
 
@@ -61,7 +60,9 @@ const About = () => {
       >
         <h2>About Myself</h2>
         <p className="large">
-          {selectedLanguage === "en" ? t("about") : t("about", { lng: "kr" })}
+          {selectedLanguage === "en"
+            ? t("aboutbio")
+            : t("aboutbio", { lng: "kr" })}
         </p>
         <hr />
         <ul
@@ -89,7 +90,12 @@ const About = () => {
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <p style={{ padding: "1rem 3rem 0" }}>
+          {" "}
+          {selectedLanguage === "en"
+            ? t("aboutbio2")
+            : t("aboutbio2", { lng: "kr" })}
+        </p>
       </div>
     </section>
   );

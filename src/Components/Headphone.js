@@ -4,9 +4,14 @@ import SpotifyPlaylist from "./Spotify";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useState, useEffect } from "react";
+import { useLanguage } from "../LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const Headphone = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+  const { t } = useTranslation();
+  const { selectedLanguage, toggleLanguage } = useLanguage();
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,7 +40,7 @@ const Headphone = () => {
           paddingTop: "10%",
         }}
       >
-        What I Use
+        {selectedLanguage === "en" ? t("airpods") : t("airpods", { lng: "kr" })}
       </h1>
 
       <div className="wrapper">
@@ -46,10 +51,6 @@ const Headphone = () => {
           <Airpods />
         </Canvas>
       </div>
-      {/* {isLargeScreen ? (
-      ) : (
-        <h1>This</h1>
-      )} */}
     </div>
   );
 };

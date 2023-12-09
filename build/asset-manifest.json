@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b3c1a81.css",
-    "main.js": "/static/js/main.2f2203a0.js",
+    "main.css": "/static/css/main.f44bf26b.css",
+    "main.js": "/static/js/main.9c401a1e.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/museum.jpg": "/static/media/museum.e5f7036aecd1fe1288ac.jpg",
     "static/media/garden.jpg": "/static/media/garden.20e2611693078bdf367d.jpg",
     "static/media/hike.jpg": "/static/media/hike.05bc75143428c5f9a806.jpg",
     "static/media/library.jpg": "/static/media/library.3ee481b0c876b4c97b13.jpg",
@@ -15,23 +16,23 @@
     "static/media/osoluk.jpg": "/static/media/osoluk.00078e91eeabcc20dde2.jpg",
     "static/media/kunkuk.jpg": "/static/media/kunkuk.0cee230461dd214a72a9.jpg",
     "static/media/namsan.jpg": "/static/media/namsan.20324148a2f5c3c899ec.jpg",
-    "static/media/selfie.jpg": "/static/media/selfie.0d00bc7f7b4540e77406.jpg",
     "static/media/waterskyline.jpg": "/static/media/waterskyline.89156fc7970b62a702a1.jpg",
     "static/media/bostonNight.jpg": "/static/media/bostonNight.8217621f0072051e9e0b.jpg",
     "static/media/profile.jpg": "/static/media/profile.bc1382b9deeb58337ea3.jpg",
     "static/media/friends.jpg": "/static/media/friends.c26c87e0c81a5b2cbd3b.jpg",
+    "static/media/JiWoongParkResume.pdf": "/static/media/JiWoongParkResume.aa999bea5e5eb18888be.pdf",
     "static/media/instagram.svg": "/static/media/instagram.318e6df2752736d3c45c33aed816ef9f.svg",
     "static/media/github.svg": "/static/media/github.4bc72f28e79178cdc9c76db0b22c501e.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.36bd4fb37078da2bbffc9b70a0acc872.svg",
     "static/media/down-arrow.svg": "/static/media/down-arrow.91079b27aa77759d539380d0c831ab87.svg",
     "static/media/envelope.svg": "/static/media/envelope.33857507a5ba83c373a8c7d5f0d0c948.svg",
-    "main.3b3c1a81.css.map": "/static/css/main.3b3c1a81.css.map",
-    "main.2f2203a0.js.map": "/static/js/main.2f2203a0.js.map",
+    "main.f44bf26b.css.map": "/static/css/main.f44bf26b.css.map",
+    "main.9c401a1e.js.map": "/static/js/main.9c401a1e.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b3c1a81.css",
-    "static/js/main.2f2203a0.js"
+    "static/css/main.f44bf26b.css",
+    "static/js/main.9c401a1e.js"
   ]
 }

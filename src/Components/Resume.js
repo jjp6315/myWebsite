@@ -12,7 +12,7 @@ const Resume = () => {
             textDecoration: "underline",
           }}
         >
-          View my Resume Online
+          View my Resume in New Tab
         </div>
       </a>
     </div>
