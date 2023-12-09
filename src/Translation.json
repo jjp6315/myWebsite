@@ -8,8 +8,9 @@
     "listen": "Listen Along",
     "airpods": "What I Use",
     "spotify": "https://open.spotify.com/embed/playlist/31WLmvzYHieK21tk2jbk2u?utm_source=generator",
-    "aboutbio": "After 22 years of living, I have witnessed and experienced many things in America and South Korea. As I graduate Penn State with a degree in Computer Science and a minor in Mathematics, I am looking to start my career in the tech industry.",
-    "aboutbio2": "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all."
+    "aboutMe": "About Myself",
+    "aboutbio": "I will graduate Penn State in Spring 2024 with a degree in Computer Science and a minor in Mathematics. Through my experience, I became familiar with Backend and Frontend Software Engineering methods. After graduation, my plan is to take an extended trip to South Korea and Japan before starting a full-time position as TDP Software Engineer at UnitedHealth Group/Optum in Boston, Massachusetts.",
+    "aboutbio2": "At Pennsylvania State University, my favorite subject was Natural Language Processing and Neural Network Models. My favorite class was a neural networks class and I was able to apply those skills to create my own signature and number recognition model in MATLAB. I was also a part of a research team under Professor Mahfuza to help develop a sentimental analysis and depression detection model with the use of neural networks. It is one of my goals to return to graduate school to continue my research in the AI and Neural Networks field."
   },
   "kr": {
     "home": "홈",
@@ -20,7 +21,8 @@
     "listen": "음악 듣기",
     "airpods": "사용 에어팟",
     "spotify": "https://open.spotify.com/embed/playlist/6kW6sb9bc2C5McMWIGubnI?utm_source=generator",
-    "aboutbio": "22년을 살면서 저는 미국과 한국에서 많은 것을 목격하고 경험했습니다. 컴퓨터 과학 학위와 수학 부전공으로 Penn State를 졸업하면서 기술 산업에서 경력을 시작하려고 합니다.",
-    "aboutbio2": "저는 혁신을 주도하기 위해 새롭고 창의적인 방식으로 문제를 해결하는 데 열정적입니다. UI/UX 경험을 활용하여 모든 사람이 기술에 액세스할 수 있도록 새롭고 더 나은 방법을 지속적으로 모색합니다."
+    "aboutMe": "자기소개",
+    "aboutbio": "저는 2024년 봄에 컴퓨터 과학 학위와 수학 부전공으로 Penn State를 졸업할 예정입니다. 경험을 통해 저는 백엔드와 프론트엔드 소프트웨어 엔지니어링 방법에 익숙해졌습니다. 졸업 후에는 한국과 일본을 장기간 여행한 후 매사추세츠 주 보스턴에 있는 UnitedHealth Group/Optum에서 TDP 소프트웨어 엔지니어로 정규직으로 일할 계획입니다.",
+    "aboutbio2": "펜실베니아 주립대학교에서 제가 가장 좋아하는 과목은 자연어 처리와 신경망 모델이었습니다. 제가 가장 좋아하는 수업은 신경망 수업이었고 이러한 기술을 적용하여 MATLAB에서 나만의 서명 및 번호 인식 모델을 만들 수 있었습니다. 나는 또한 신경망을 활용한 감성 분석 및 우울증 탐지 모델 개발을 돕기 위해 Mahfuza 교수가 이끄는 연구팀의 일원이었습니다. AI와 신경망 분야의 연구를 계속하기 위해 대학원으로 돌아가는 것이 나의 목표 중 하나입니다."
   }
 }

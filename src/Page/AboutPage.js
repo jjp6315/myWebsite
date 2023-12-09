@@ -7,15 +7,13 @@ const imageAltText = "purple and blue abstract background";
 
 const skillsList = [
   "Student",
-  "Computer",
-  "Athlete",
-  "Intern",
+  "Math",
+  "Computer Science",
+  "Soccer",
   "Reading",
-  "Travel",
+  "In Boston",
 ];
 
-const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
 
 const About = () => {
   const { t } = useTranslation();
@@ -58,7 +56,9 @@ const About = () => {
           maxWidth: "70vw",
         }}
       >
-        <h2>About Myself</h2>
+        <h2>{selectedLanguage === "en"
+            ? t("aboutMe")
+            : t("aboutMe", { lng: "kr" })}</h2>
         <p className="large">
           {selectedLanguage === "en"
             ? t("aboutbio")
@@ -90,7 +90,7 @@ const About = () => {
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>
+        <p style={{ padding: "0rem 3rem 0" }}>
           {" "}
           {selectedLanguage === "en"
             ? t("aboutbio2")
