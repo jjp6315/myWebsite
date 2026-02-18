@@ -18,13 +18,13 @@ const projectList = [
   {
     title: "Recishop",
     description:
-      "A shopping list builder that helps people make shopping lists from custom recipes.",
+      "A shopping list builder that helps people make shopping lists from custom recipes. Worked as a team to develop a full stack web application. Learned valuable innovative motivation and skills",
     url: "https://github.com/Recishop/Recishop",
   },
   {
     title: "Twitter Clone App",
     description:
-      "Built Twitter clone through CodePath's Android University. Used Parse as backend.",
+      "Built Twitter clone through CodePath's Android University. Coded in Java and used Parse for backend API connection.",
     url: "https://github.com/jjp6315/SimpleTweet",
   },
 ];
