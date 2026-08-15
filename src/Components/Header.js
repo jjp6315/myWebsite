@@ -1,51 +1,24 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import LanguageToggle from "./LanguageToggle";
 import { useLanguage } from "../LanguageContext";
-import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const { t } = useTranslation();
-  const { selectedLanguage, toggleLanguage } = useLanguage();
+  const { selectedLanguage } = useLanguage();
+  const translated = (key) => t(key, { lng: selectedLanguage });
+
   return (
-    <div
-      style={{
-        position: "fixed",
-        display: "flex",
-        flex: 1,
-        justifyContent: "space-between",
-        alignItems: "center",
-        background: "	#212121",
-        paddingTop: "1rem",
-        paddingBottom: "1rem",
-        paddingLeft: "2rem",
-        top: 0,
-        left: 0,
-        width: "100%",
-        zIndex: 1,
-      }}
-    >
-      <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-        <a href="/">
-          {selectedLanguage === "en" ? t("home") : t("home", { lng: "kr" })}
-        </a>
-        <a href="/AboutPage">
-          {selectedLanguage === "en" ? t("about") : t("about", { lng: "kr" })}
-        </a>
-        <a href="/Portfolio">
-          {selectedLanguage === "en"
-            ? t("portfolio")
-            : t("portfolio", { lng: "kr" })}
-        </a>
-        <a href="/PhotoGallery">
-          {selectedLanguage === "en"
-            ? t("gallery")
-            : t("gallery", { lng: "kr" })}
-        </a>
-      </div>
-      <div style={{ paddingRight: "3rem" }}>
-        <LanguageToggle />
-      </div>
-    </div>
+    <header className="site-header">
+      <nav className="site-nav" aria-label="Main navigation">
+        <NavLink to="/">{translated("home")}</NavLink>
+        <NavLink to="/about">{translated("about")}</NavLink>
+        <NavLink to="/portfolio">{translated("portfolio")}</NavLink>
+        <NavLink to="/photos">{translated("gallery")}</NavLink>
+      </nav>
+      <LanguageToggle />
+    </header>
   );
 };
 

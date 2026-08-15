@@ -4,7 +4,7 @@ import PDF from "../PDF/JiWoongParkResume.pdf";
 const Resume = () => {
   return (
     <div>
-      <a href={PDF} without rel="noopener noreferrer" target="_blank">
+      <a href={PDF} rel="noopener noreferrer" target="_blank">
         <div
           style={{
             textAlign: "center",

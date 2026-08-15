@@ -1,31 +1,13 @@
 import React from "react";
 import Airpods from "./Airpods";
-import SpotifyPlaylist from "./Spotify";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useState, useEffect } from "react";
 import { useLanguage } from "../LanguageContext";
 import { useTranslation } from "react-i18next";
 
 const Headphone = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(true);
-
   const { t } = useTranslation();
-  const { selectedLanguage, toggleLanguage } = useLanguage();
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1000); // Adjust the breakpoint as needed
-    };
-
-    // Add event listener to window resize
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const { selectedLanguage } = useLanguage();
 
   return (
     <div>
@@ -40,7 +22,7 @@ const Headphone = () => {
           paddingTop: "10%",
         }}
       >
-        {selectedLanguage === "en" ? t("airpods") : t("airpods", { lng: "kr" })}
+        {t("airpods", { lng: selectedLanguage })}
       </h1>
 
       <div className="wrapper">

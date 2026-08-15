@@ -1,11 +1,10 @@
 import React from "react";
-import i18n from "i18next";
-import { initReactI18next, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { useLanguage } from "../LanguageContext";
 
 const SpotifyPlaylist = () => {
   const { t } = useTranslation();
-  const { selectedLanguage, toggleLanguage } = useLanguage();
+  const { selectedLanguage } = useLanguage();
 
   return (
     <div>
@@ -21,7 +20,7 @@ const SpotifyPlaylist = () => {
             paddingTop: "10%",
           }}
         >
-          {selectedLanguage === "en" ? t("listen") : t("listen", { lng: "kr" })}
+          {t("listen", { lng: selectedLanguage })}
         </h1>
       </div>
 
@@ -34,12 +33,13 @@ const SpotifyPlaylist = () => {
           backgroundColor: "black",
         }}
         src={
-          selectedLanguage === "en" ? t("spotify") : t("spotify", { lng: "kr" })
+          t("spotify", { lng: selectedLanguage })
         }
         width="70%"
         height="550"
         frameBorder="0"
-        allowFullScreen=""
+        title="Ji Woong Park's Spotify playlist"
+        allowFullScreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>

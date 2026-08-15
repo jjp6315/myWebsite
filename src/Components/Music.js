@@ -10,7 +10,6 @@ const Music = () => {
         flexDirection: "row",
         backgroundColor: "black",
         flex: 1,
-        display: "flex",
       }}
       id="music"
     >
@@ -50,7 +49,7 @@ const Music = () => {
           style={{
             width: "80%",
             background:
-              "linear-gradient(to bottom, rgb(215, 30, 1490, 0.7), rgba(0, 0, 0, 0.5))",
+              "linear-gradient(to bottom, rgba(215, 30, 149, 0.7), rgba(0, 0, 0, 0.5))",
             display: "inline-block",
             borderRadius: "30px",
             marginRight: "5%",

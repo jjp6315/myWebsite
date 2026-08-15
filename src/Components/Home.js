@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense } from "react";
 import arrowSvg from "../images/down-arrow.svg";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { useLanguage } from "../LanguageContext";
@@ -9,9 +9,9 @@ import { useTranslation } from "react-i18next";
 
 const imageAltText = "Korea night view at 남산타워";
 
-const Home = ({ name }) => {
+const Home = () => {
   const { t } = useTranslation();
-  const { selectedLanguage, toggleLanguage } = useLanguage();
+  const { selectedLanguage } = useLanguage();
 
   const [text1] = useTypewriter({
     words: [
@@ -38,7 +38,7 @@ const Home = ({ name }) => {
             objectFit: "cover",
           }}
         >
-          <img className="background" src={image} alt="" />
+          <img className="background" src={image} alt={imageAltText} />
         </div>
 
         <div
@@ -54,9 +54,7 @@ const Home = ({ name }) => {
               fontSize: "7vw",
             }}
           >
-            {selectedLanguage === "en"
-              ? t("welcome")
-              : t("welcome", { lng: "kr" })}
+            {t("welcome", { lng: selectedLanguage })}
           </h1>
         </div>
 
@@ -118,6 +116,7 @@ const Home = ({ name }) => {
               height: "20vw",
             }}
             src={portfolio}
+            alt="Ji Woong John Park"
           />
         </div>
       </section>
@@ -126,105 +125,3 @@ const Home = ({ name }) => {
 };
 
 export default Home;
-
-// const [text1] = useTypewriter({
-//   words: ["coding", "", "", ""],
-//   loop: true,
-//   deleteSpeed: 0,
-//   typeSpeed: 100,
-//   delaySpeed: 2500,
-// });
-// const [text2] = useTypewriter({
-//   words: ["", "reading", "", ""],
-//   loop: true,
-//   deleteSpeed: 0,
-//   typeSpeed: 100,
-//   delaySpeed: 2500,
-// });
-// const [text3] = useTypewriter({
-//   words: ["", "", "playing soccer", ""],
-//   loop: true,
-//   deleteSpeed: 0,
-//   typeSpeed: 100,
-//   delaySpeed: 2500,
-// });
-// const [text4] = useTypewriter({
-//   words: ["", "", "", "traveling"],
-//   loop: true,
-//   deleteSpeed: 0,
-//   typeSpeed: 100,
-//   delaySpeed: 2500,
-// });
-
-{
-  /* <div
-  style={{
-    flexDirection: "row",
-    display: "flex",
-    alignContent: "center",
-  }}
->
-  <h2
-    style={{
-      fontSize: 50,
-      color: "white",
-      paddingRight: "2%",
-      paddingTop: "4%",
-      fontFamily: "Helvetica",
-    }}
-  >
-    I enjoy
-  </h2>
-  <h2
-    style={{
-      fontSize: 50,
-      color: "white",
-      fontFamily: "Courier New",
-      paddingTop: "4%",
-    }}
-  >
-    {text1}
-  </h2>
-  <h2
-    style={{
-      fontSize: 50,
-      color: "white",
-      fontFamily: "Brush Script MT",
-      paddingTop: "4%",
-    }}
-  >
-    {text2}
-  </h2>
-  <h2
-    style={{
-      fontSize: 50,
-      color: "white",
-      fontFamily: "Gill Sans",
-      paddingTop: "3.6%",
-    }}
-  >
-    {text3}
-  </h2>
-  <h2
-    style={{
-      fontSize: 50,
-      color: "white",
-      fontFamily: "impact",
-      paddingTop: "4%",
-    }}
-  >
-    {text4}
-  </h2>
-
-  <h2
-    style={{
-      fontSize: 45,
-      color: "white",
-      paddingRight: "2%",
-      paddingTop: "4%",
-    }}
-  >
-    <Cursor cursorStyle="|" cursorColor="white" />
-  </h2>
-</div> */
-}

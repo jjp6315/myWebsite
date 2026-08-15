@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import library from "../images/library.jpg";
 import waterskyline from "../images/waterskyline.jpg";
 import tunnel from "../images/tunnel.jpg";
@@ -16,9 +16,10 @@ import bostonselfie from "../images/bostonselfie.jpg";
 const Gallery = () => {
   const trackRef = useRef(null);
 
-  const handleOnDown = (e) => {
+  const handleOnDown = (event) => {
     if (trackRef.current) {
-      trackRef.current.dataset.mouseDownAt = e.clientX;
+      trackRef.current.dataset.mouseDownAt = event.clientX;
+      event.currentTarget.setPointerCapture(event.pointerId);
     }
   };
 
@@ -30,33 +31,34 @@ const Gallery = () => {
     }
   };
 
-  const handleOnMove = (e) => {
-    if (trackRef.current && trackRef.current.dataset.mouseDownAt === "0") {
+  const handleOnMove = (event) => {
+    const track = trackRef.current;
+    if (!track || track.dataset.mouseDownAt === "0") {
       return;
     }
 
     const mouseDelta =
-      parseFloat(trackRef.current.dataset.mouseDownAt) - e.clientX;
+      parseFloat(track.dataset.mouseDownAt) - event.clientX;
     const maxDelta = window.innerWidth / 2;
 
     const percentage = (mouseDelta / maxDelta) * -100;
     const nextPercentageUnconstrained =
-      parseFloat(trackRef.current.dataset.prevPercentage) + percentage;
+      parseFloat(track.dataset.prevPercentage || "0") + percentage;
     const nextPercentage = Math.max(
       Math.min(nextPercentageUnconstrained, 0),
       -100
     );
 
-    trackRef.current.dataset.percentage = nextPercentage;
+    track.dataset.percentage = nextPercentage;
 
-    trackRef.current.animate(
+    track.animate(
       {
         transform: `translate(${nextPercentage}%, -50%)`,
       },
       { duration: 1200, fill: "forwards" }
     );
 
-    const images = trackRef.current.getElementsByClassName("image");
+    const images = track.getElementsByClassName("image");
     for (const image of images) {
       image.animate(
         {
@@ -66,30 +68,6 @@ const Gallery = () => {
       );
     }
   };
-
-  /* -- Add event listeners using useEffect -- */
-
-  useEffect(() => {
-    window.addEventListener("mousedown", handleOnDown);
-    window.addEventListener("touchstart", (e) => handleOnDown(e.touches[0]));
-    window.addEventListener("mouseup", handleOnUp);
-    window.addEventListener("touchend", (e) => handleOnUp(e.touches[0]));
-    window.addEventListener("mousemove", handleOnMove);
-    window.addEventListener("touchmove", (e) => handleOnMove(e.touches[0]));
-
-    return () => {
-      window.removeEventListener("mousedown", handleOnDown);
-      window.removeEventListener("touchstart", (e) =>
-        handleOnDown(e.touches[0])
-      );
-      window.removeEventListener("mouseup", handleOnUp);
-      window.removeEventListener("touchend", (e) => handleOnUp(e.touches[0]));
-      window.removeEventListener("mousemove", handleOnMove);
-      window.removeEventListener("touchmove", (e) =>
-        handleOnMove(e.touches[0])
-      );
-    };
-  }, []);
 
   return (
     <div
@@ -104,21 +82,30 @@ const Gallery = () => {
         ref={trackRef}
         data-mouse-down-at="0"
         data-prev-percentage="0"
+        data-percentage="0"
+        onPointerDown={handleOnDown}
+        onPointerMove={handleOnMove}
+        onPointerUp={handleOnUp}
+        onPointerCancel={handleOnUp}
       >
         {/* Your image elements */}
-        <img className="image" src={library} draggable="false" />
-        <img className="image" src={waterskyline} draggable="false" />
-        <img className="image" src={foodtable} draggable="false" />
-        <img className="image" src={friends} draggable="false" />
-        <img className="image" src={osoluk} draggable="false" />
-        <img className="image" src={folkvillage} draggable="false" />
-        <img className="image" src={tunnel} draggable="false" />
-        <img className="image" src={kunkuk} draggable="false" />
-        <img className="image" src={hike} draggable="false" />
-        <img className="image" src={namsan} draggable="false" />
-        <img className="image" src={garden} draggable="false" />
-        <img className="image" src={water} draggable="false" />
-        <img className="image" src={bostonselfie} draggable="false" />
+        {[
+          [library, "Library interior"],
+          [waterskyline, "Skyline across the water"],
+          [foodtable, "Food arranged on a table"],
+          [friends, "Friends together"],
+          [osoluk, "O'Sulloc tea fields"],
+          [folkvillage, "Korean folk village"],
+          [tunnel, "Illuminated tunnel"],
+          [kunkuk, "Konkuk University"],
+          [hike, "Mountain hike"],
+          [namsan, "Namsan Tower"],
+          [garden, "Garden"],
+          [water, "Water landscape"],
+          [bostonselfie, "Selfie in Boston"],
+        ].map(([src, alt]) => (
+          <img key={src} className="image" src={src} alt={alt} draggable="false" />
+        ))}
       </div>
     </div>
   );

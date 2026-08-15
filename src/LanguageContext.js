@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useMemo,
+  useState,
+} from "react";
 
 const LanguageContext = createContext();
 
@@ -7,25 +13,22 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    () => localStorage.getItem("selectedLanguage") || "en"
+  );
 
-  useEffect(() => {
-    const storedLanguage = localStorage.getItem("selectedLanguage");
-    if (storedLanguage) {
-      setSelectedLanguage(storedLanguage);
-    }
+  const toggleLanguage = useCallback(() => {
+    setSelectedLanguage((language) => {
+      const newLanguage = language === "en" ? "kr" : "en";
+      localStorage.setItem("selectedLanguage", newLanguage);
+      return newLanguage;
+    });
   }, []);
 
-  const toggleLanguage = () => {
-    const newLanguage = selectedLanguage === "en" ? "kr" : "en";
-    setSelectedLanguage(newLanguage);
-    localStorage.setItem("selectedLanguage", newLanguage);
-  };
-
-  const contextValue = {
-    selectedLanguage,
-    toggleLanguage,
-  };
+  const contextValue = useMemo(
+    () => ({ selectedLanguage, toggleLanguage }),
+    [selectedLanguage, toggleLanguage]
+  );
 
   return (
     <LanguageContext.Provider value={contextValue}>

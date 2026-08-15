@@ -54,6 +54,7 @@ const Portfolio = () => {
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
           <img
             src={image}
+            alt="Museum gallery interior"
             style={{
               height: "90%",
               width: "100%",

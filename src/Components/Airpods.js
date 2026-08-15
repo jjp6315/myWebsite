@@ -17,7 +17,7 @@ export default function Model(props) {
   const groupRef = useRef();
 
   useFrame(() => {
-    groupRef.current.rotation.y -= 0.01; // Rotate around the Y-axis
+    if (groupRef.current) groupRef.current.rotation.y -= 0.01;
   });
 
   return (

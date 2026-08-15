@@ -17,7 +17,7 @@ const skillsList = [
 
 const About = () => {
   const { t } = useTranslation();
-  const { selectedLanguage, toggleLanguage } = useLanguage();
+  const { selectedLanguage } = useLanguage();
 
   return (
     <section

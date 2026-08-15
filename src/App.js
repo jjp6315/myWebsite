@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-import { createContext, useState, useEffect, useContext } from "react";
 import Header from "./Components/Header";
 import AboutPage from "./Page/AboutPage";
 import Portfolio from "./Page/PortfolioPage";
@@ -8,7 +7,7 @@ import HomePage from "./Page/Homepage";
 import PhotoPage from "./Page/PhotoPage";
 
 import "./index.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const siteProps = {
   name: "Ji Woong John Park",
@@ -20,51 +19,20 @@ const siteProps = {
 };
 
 function App() {
-  const [isLargeScreen, setIsLargeScreen] = useState(() => {
-    // Get the stored value from local storage, default to true if not found
-    const storedValue = localStorage.getItem("isLargeScreen");
-    return storedValue === "false" ? false : true;
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth <= 900); // Adjust the breakpoint as needed
-    };
-    handleResize();
-    // Add event listener to window resize
-    window.addEventListener("resize", handleResize);
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  // Save the value to local storage whenever it changes
-  useEffect(() => {
-    localStorage.setItem("isLargeScreen", isLargeScreen);
-  }, [isLargeScreen]);
-
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div id="Main">
-        <Header />
-        <Router>
+      <BrowserRouter>
+        <div id="main">
+          <Header />
           <Routes>
-            <Route exact path="/" element={<HomePage />} />
-
-            <Route path="/AboutPage" element={<AboutPage />} />
-
-            <Route path="/Portfolio" element={<Portfolio />} />
-
-            <Route path="/PhotoGallery" element={<PhotoPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/photos" element={<PhotoPage />} />
           </Routes>
-        </Router>
-        <Footer
-          {...siteProps}
-          primaryColor={"#000000"}
-          secondaryColor={"#000000"}
-        />
-      </div>
+          <Footer {...siteProps} primaryColor="#000000" />
+        </div>
+      </BrowserRouter>
     </Suspense>
   );
 }
